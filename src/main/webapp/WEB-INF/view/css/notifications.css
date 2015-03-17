@@ -1,0 +1,67 @@
+.container-fluid{
+	width:100%;
+	height:585px;
+	overflow: scroll;
+}
+
+$dblue: hsl(202, 56%, 30%);
+$green: hsl(143, 51%, 45%);
+$white: hsl(0, 0%, 96%);
+$red: hsl(12, 85%, 47%);
+$orange: hsl(24, 54%, 53%);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.notifications {
+  position: absolute;
+  left:19%;
+}
+.notify {
+  width: 1020px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 7px;
+  box-shadow: 0 1px 4px darken($dblue, 5%); 
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.notify:first-child {
+  margin: 0 0 10px 0;
+}
+.circle {
+  width: 28px;
+  height: 20px;
+  transform: translate(10px, 3px);
+  color: black;
+  padding: 10px 0 10px 13px;
+}
+.gr > .info span:first-child { color: #5cb85c; }
+.rd > .info span:first-child { color: #d9534f; }
+.or > .info span:first-child { color: #f0ad4e; }
+.bl > .info span:first-child { color: #337ab7; }
+.pi > .info span:first-child { color: #5bc0de;}
+.gy > .info span:first-child { color: #777;}
+.info {
+  width: 1000px; 
+  height: 70px;
+  transform: translate(60px, -20px);
+  
+  padding: 10px;
+}
+.info span:first-child {
+  
+  color: $green;
+  font-weight: 600;
+  font-size: 15px;
+}
+.info span:last-child {
+  color: hsl(0, 0%, 57%);
+  font-size: 13px;
+}
+.info span a {
+  color: hsl(0, 0%, 33%);
+  text-decoration: none;
+  font-weight: 600;
+}

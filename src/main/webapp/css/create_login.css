@@ -1,0 +1,131 @@
+ @font-face { font-family: Exo-ExtraLight; src: url('../fonts/Exo-ExtraLight.otf'); }
+ @font-face { font-family: Exo-Medium; src: url('../fonts/Exo-Medium.otf'); }
+ @font-face { font-family: Exo-Light; src: url('../fonts/Exo-Light.otf'); }   
+  @font-face { font-family: Exo-Bold; src: url('../fonts/Exo-Bold.otf'); }  
+body{
+	background: url("../img/images.jpg");
+	background-size : cover;
+}
+.body{
+	background-size : cover;
+}
+.header{
+	position: absolute;
+	top: 10%;
+	margin-left: 40%;
+}
+.header div{
+	float: left;
+	color: navy;
+	font-family: 'Exo-Medium', sans-serif;
+	font-size: 15px;
+}
+.header div span{
+	color: aqua;
+}
+.details{
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	height: 150px;
+	padding: 10px;
+	z-index: 2;
+}
+.details input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+
+.details input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light',sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+select{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+.details input[type=submit]{
+	width: 250px;
+	height: 30px;
+	background: lightskyblue;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	color:blue;
+	font-family: 'Exo-Bold',sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 4px;
+	cursor: pointer;
+	
+}
+
+#perr
+{
+	position: relative;
+	padding-left: 10px;
+	font-family: Exo;
+	font-size: 15px;
+}
+
+#rolemsg
+{
+	position: relative;
+	padding-left: 10px;
+	font-family: Exo;
+	font-size: 15px;
+	color: #ff6666;
+}
+
+#lcmsg
+{
+	position: relative;
+	padding-left: 10px;
+	font-family: Exo;
+	font-size: 15px;
+	color: #ff6666;
+}
+
+#successmsg
+{
+	position: relative;
+	font-family: Exo;
+	font-size: 15px;
+	color: green;
+	padding-left: 5px;
+}
+
+#failuremsg
+{
+	position: relative;
+	font-family: Exo;
+	font-size: 15px;
+	color: #ff6666;
+	margin-left: -25%;
+}
+
+

@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+.panel-default {
+	text-align: center;
+	cursor: default;
+	font-family: Caladea, sans-serif;
+	background-color: #d8afaf;
+	border-radius: 10px;
+}
+
+.panel-default>.panel-footer {
+	color: #fff;
+	background-color: #aaffaa;
+	display: none;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	
+}
+
+.panel-footer a:HOVER
+{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.panel-default i {
+	font-size: 5em;
+}
