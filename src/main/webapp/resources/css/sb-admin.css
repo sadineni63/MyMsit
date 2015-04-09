@@ -14,7 +14,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #808040;
+    background-color: #ffffff;
     overflow-x:hidden;
 }
 
@@ -136,9 +136,9 @@ ul.alert-dropdown {
 	font-family: Bodoni MT Condensed;
 		font-weight: bold;
 		color: #ffff3c;
-		margin-left: 20%;
+		margin-left: 15%;
 		width: auto;
-		font-size: 30px;
+		font-size: 32px;
 		
 }
 
@@ -155,7 +155,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #808040;
+        background-color: #408080;
         height: 100%;
     }
     
@@ -168,7 +168,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #808040 !important;
+        background-color: #000080!important;
     }
 }
 

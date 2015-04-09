@@ -97,7 +97,6 @@ a.clickable:hover { text-decoration:none; }
 	#no-more-tables td:before { content: attr(data-title); }
 }
 #edit{
-	height:25px;
 }
 td,th{
 	text-align:center;

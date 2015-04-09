@@ -6,5 +6,4 @@
 
 <import resource="database-config.xml"/>
 <import resource="users-config.xml"/>
-<import resource="security-config.xml"/>
 </beans>

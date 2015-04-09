@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.mymsit.course.LearningCenter;
 import net.mymsit.dao.LoginDAO;
@@ -15,6 +16,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -31,16 +33,23 @@ public class LoginRequestHandler {
 	}
 	
 	@RequestMapping("/create")
-	public String greateForm() {
+	public String greateForm(HttpServletRequest request) {
+		if(request.isRequestedSessionIdValid())
 		return "create_login";
+		else
+			return "redirect:/Login/signin";
 	}
 
 	@RequestMapping("/signin")
 	public String loginInForm(HttpServletRequest request) {
+		if(request.getSession().getAttribute("username")!=null)
+			return "redirect:/dashboard";
 		return "login";
 	}
 	@RequestMapping("/create.do")
 	public String createLoginDetails(HttpServletRequest request) {
+		if(!request.isRequestedSessionIdValid())
+			return "redirect:/Login/signin";
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String role = request.getParameter("role");
@@ -63,6 +72,9 @@ public class LoginRequestHandler {
 
 	@RequestMapping("/signin.do")
 	public String signInUser(HttpServletRequest request) throws IOException {
+		
+		if(request.getSession().getAttribute("username")!=null)
+			return "redirect:/dashboard";
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		Login details;
@@ -84,6 +96,15 @@ public class LoginRequestHandler {
 				return "login";
 			}
 		}
+	}
+	
+	@RequestMapping("signout")
+	public String logout(HttpServletRequest request)
+	{
+		HttpSession session=request.getSession();
+		session.removeAttribute("username");
+		session.removeAttribute("role");
+		return "login";
 	}
 
 	

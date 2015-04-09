@@ -37,7 +37,7 @@
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 <script>
 	$(function() {
-		$("#header").load("static/header.html");
+			$("#header").load("resources/header.jsp");
 	});
 
 	$(document).on(
@@ -78,6 +78,7 @@
 		$('.panel-heading span.clickable').click();
 		$('.panel div.clickable').click();
 	});
+	
 </script>
 </head>
 
@@ -85,64 +86,7 @@
 	<div id="wrapper">
 		<!-- Navigation -->
 				<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-                <a class="navbar-brand" href="dashboard.html"><span class="title">Master of Science in Information Technology</span></a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                              <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Welcome ${username} <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <a href="dashboard.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="notifications.html"><i class="fa fa-fw fa-bell"></i> Notifications</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-calendar"></i> Calendar</a>
-                    </li>
-                    <li>
-                        <a href="courses.html"><i class="fa fa-fw fa-bar-chart-o"></i> Courses</a>
-                    </li>
-                    <li>
-                        <a href="profile.html"><i class="fa fa-fw fa-bar-chart-o"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="batchmates.html"><i class="fa fa-fw fa-bar-chart-o"></i> Batch Mates</a>
-                    </li>
-                    <li>
-                        <a href="mentors.html"><i class="fa fa-fw fa-bar-chart-o"></i> Mentors</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-	
+		<div id="header"></div>
 		<div id="page-wrapper">
 			<div class="container-fluid">
 				<!-- Page Heading -->
@@ -197,10 +141,10 @@
 											<td data-title="Submissions Status" class="numeric">Closed<a
 												href=""></a>
 											</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-											<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">2</td>
@@ -211,10 +155,10 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-													<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">3</td>
@@ -225,10 +169,10 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-													<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">4</td>
@@ -239,10 +183,10 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-													<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">5</td>
@@ -253,10 +197,10 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-													<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">6</td>
@@ -267,16 +211,24 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button type="button" id="edit" data-toggle="modal"
+											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
 													data-target="#myModal1">Edit</button></td>
-													<td><button type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit content</button></td>
+													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
+													data-target="#myModal">Edit Content</button></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
+							<div style="text-align: center" class="form-buttons-wrapper">
+					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
+						data-toggle="modal" data-target="#myModal">Add Module</button>
+				</div>
 						</div>
 					</div>
+					<div style="text-align: center" class="form-buttons-wrapper">
+					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
+						data-toggle="modal" data-target="#weekModal">Add Week</button>
+				</div>
 					<h3>Grading Policy</h3>
 					<table id="grading" border=1>
 					<tr><td>credits</td><td>2</td>
@@ -286,6 +238,7 @@
 					<tr><td>final exam weight</td><td>20%</td>
 					<tr><td>passing criterion</td><td>80%</td>
 					</table>
+					
 				</div>
 			</div>
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -344,6 +297,76 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="weekModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h3 class="modal-title" id="myModalLabel">Week Form</h3>
+					</div>
+					<div class="modal-body">
+						<div class="details">
+							<form role="form" action="create_course" method="post">
+								<div class="form-group">
+
+									<label>Course ID* :</label> <input type="text" name="cid"
+										required="required" readonly="readonly" class="form-control" id="cid" value="<%=request.getSession().getAttribute("cid")%>"><br>
+									<label>Week Number* :</label> <input type="text" name="wno"
+										required="required" class="form-control" id="cname">
+
+								</div>
+								<div class="form-group">
+									<div class="hero-unit">
+										<label>Start Date*:</label> <input type="date" required="required"
+											class="form-control" id="sdate" name="sdate">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="hero-unit">
+										<label>End Date*:</label> <input type="date" required="required"
+											class="form-control" id="edate" name="edate">
+									</div>
+								</div>
+
+								<center><button id="myBtn" type="submit" class="btn btn-default"
+									onclick="values()">Submit</button></center>
+							</form>
+						</div>
+
+					</div>
+					<script src="resources/js/jquery.min.js"></script>
+					<script src="resources/js/bootstrap-datepicker.js"></script>
+					<script type="text/javascript">
+						// When the document is ready
+						$(document).ready(function() {
+
+							$('#example1').datepicker({
+								format : "dd/mm/yyyy"
+							});
+
+						});
+					</script>
+					<script type="text/javascript">
+						var form = $('#weekModal');
+						form.submit(function(ev) {
+							$.ajax({
+								type : form.attr('method'),
+								url : form.attr('action'),
+								data : form.serialize(),
+								success : function(data) {
+									window.location.reload();
+								}
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">

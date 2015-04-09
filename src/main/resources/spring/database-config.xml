@@ -14,5 +14,11 @@
 		<bean id="loginDAO" class="net.mymsit.dao.LoginDAO">
 		<property name="dataSource" ref="msitDataSource"></property>
 	</bean>
+		<bean id="courseDAO" class="net.mymsit.dao.CourseDAO">
+		<property name="dataSource" ref="msitDataSource"></property>
+	</bean>
+	
+	<bean id="bCrypt" class="net.mymsit.security.BCrypt">
+	</bean>
 
 </beans>

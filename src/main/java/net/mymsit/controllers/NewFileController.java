@@ -13,4 +13,9 @@ public class NewFileController {
 		modeView.addObject("message","Hi this is my forst MVC page.");
 		return modeView;
 	}
+	
+	@RequestMapping("/boot")
+	public String boot() {
+		return "bootstrap-elements";
+	}
 }

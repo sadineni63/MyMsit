@@ -19,6 +19,4 @@
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources mapping="/static/**" location="/static/" />
-	
-
 </beans>

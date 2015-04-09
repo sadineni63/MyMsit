@@ -10,6 +10,7 @@ import net.mymsit.user.Login;
 import net.mymsit.user.LoginMapper;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -27,6 +28,7 @@ public class LoginDAO {
 	 * @param dataSource
 	 */
 	public void setDataSource(DataSource dataSource) {
+		this.dataSource=dataSource;
 		jdbcTempalte = new NamedParameterJdbcTemplate(dataSource);
 	}
 
@@ -64,11 +66,18 @@ public class LoginDAO {
 	 * @return Login details that matches with given username
 	 */
 	public Login getLoginDetails(String username)throws DataAccessException {
+		try
+		{
 		String query = "select * from logins where username=:username";
 		SqlParameterSource parameterSourse = new MapSqlParameterSource(
 				"username", username);
 		return (Login) jdbcTempalte.queryForObject(query, parameterSourse,
 				new LoginMapper());
+		}
+		catch(EmptyResultDataAccessException e)
+		{
+			return null;
+		}
 	}
 
 	/**Method to update existing login details that matches with given username
