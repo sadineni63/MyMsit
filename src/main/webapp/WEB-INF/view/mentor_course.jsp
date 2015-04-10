@@ -98,8 +98,6 @@
 		<div id="page-wrapper">
 
 			<div class="container-fluid">
-
-
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12">
@@ -116,6 +114,7 @@
 				<c:if test="${not empty courses}">
 
 					<%
+					
 						List<Course> courses=(ArrayList<Course>)request.getAttribute("courses");
 						for(int i=1;i<=courses.size();i++)
 						{
@@ -208,9 +207,15 @@
 				</div>
 
 		</div>
+		<%
+			if(request.getParameter("course_create")!=null)
+			{
+				%>		<script type="text/javascript"> alert("The course is duplicate. ")</script><%
+			}
+		%>
+		
 		<!-- /.container-fluid -->
 		<!-- Modal -->
-		<iframe src="http://embed.bambuser.com/channel/Lakshmi+Narayana" width="460" height="345" frameborder="0">Your browser does not support iframes.</iframe>
 		
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 			aria-labelledby="myModalLabel" aria-hidden="true">
@@ -282,8 +287,7 @@
 			</div>
 		</div>
 	</div>
-
-
+	
 	<!-- /#page-wrapper -->
 
 	<!-- jQuery -->
@@ -295,7 +299,6 @@
 
 	<!-- Flot Charts JavaScript -->
 	<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-
+	
 </body>
-
 </html>

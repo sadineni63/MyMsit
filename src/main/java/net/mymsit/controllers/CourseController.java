@@ -62,9 +62,24 @@ public class CourseController {
 		String eDate = request.getParameter("edate");
 		int status = courseDAO.createCourseDetails(cid, cname, sDate, eDate);
 		if (status == 1) {
-			return "redirect:/courses.html";
+			return "redirect:/mentor_course";
 		} else {
-			return "redirect:/courses.html?course_create=failed";
+			return "mentor_course?course_create=failed";
+		}
+	}
+	
+	@RequestMapping("/create_week")
+	public String createWeek(HttpServletRequest request)
+			throws ParseException {
+		String cid = request.getParameter("cid");
+		int week = Integer.parseInt(request.getParameter("cname").toString());
+		String sDate = request.getParameter("sdate");
+		String eDate = request.getParameter("edate");
+		int status = courseDAO.createWeeekDetails(cid, week, sDate, eDate);
+		if (status == 1) {
+			return "course_content";
+		} else {
+			return "redirect:/course_content?week_create=failed";
 		}
 	}
 

@@ -72,7 +72,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #214343;
+    color: #e2e2e2;
     font-weight: bold;
     font-family: Gill Sans;
 }
@@ -168,7 +168,8 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000080!important;
+        background-color: #3737ff!important;
+        color: black;
     }
 }
 

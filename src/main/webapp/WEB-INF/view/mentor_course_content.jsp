@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +25,8 @@
 <link href="resources/css/plugins/morris.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-	type="text/css">
+<link href="resources/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 <script>
 	$(function() {
-			$("#header").load("resources/header.jsp");
+		$("#header").load("resources/header.jsp");
 	});
 
 	$(document).on(
@@ -78,14 +78,13 @@
 		$('.panel-heading span.clickable').click();
 		$('.panel div.clickable').click();
 	});
-	
 </script>
 </head>
 
 <body>
 	<div id="wrapper">
 		<!-- Navigation -->
-				<!-- Navigation -->
+		<!-- Navigation -->
 		<div id="header"></div>
 		<div id="page-wrapper">
 			<div class="container-fluid">
@@ -141,10 +140,11 @@
 											<td data-title="Submissions Status" class="numeric">Closed<a
 												href=""></a>
 											</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">2</td>
@@ -155,10 +155,11 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">3</td>
@@ -169,10 +170,11 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">4</td>
@@ -183,10 +185,11 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">5</td>
@@ -197,10 +200,11 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 										<tr>
 											<td data-title="Module No">6</td>
@@ -211,227 +215,252 @@
 											<td data-title="Session" class="numeric">Forenoon</td>
 											<td data-title="Deadline" class="numeric">1:00 PM</td>
 											<td data-title="Submissions Status" class="numeric">Closed</td>
-											<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal1">Edit</button></td>
-													<td><button class="btn btn-success" type="button" id="edit" data-toggle="modal"
-													data-target="#myModal">Edit Content</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal1">Edit</button></td>
+											<td><button class="btn btn-success" type="button"
+													id="edit" data-toggle="modal" data-target="#myModal">Edit
+													Content</button></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							<div style="text-align: center" class="form-buttons-wrapper">
-					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-						data-toggle="modal" data-target="#myModal">Add Module</button>
-				</div>
+								<button type="button" id="addcourse"
+									class="btn btn-primary btn-lg" data-toggle="modal"
+									data-target="#myModal">Add Module</button>
+							</div>
 						</div>
 					</div>
 					<div style="text-align: center" class="form-buttons-wrapper">
-					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-						data-toggle="modal" data-target="#weekModal">Add Week</button>
-				</div>
+						<button type="button" id="addcourse"
+							class="btn btn-primary btn-lg" data-toggle="modal"
+							data-target="#weekModal">Add Week</button>
+					</div>
 					<h3>Grading Policy</h3>
 					<table id="grading" border=1>
-					<tr><td>credits</td><td>2</td>
-					<tr><td>Modules weight</td><td>50%</td>
-					<tr><td>weekend</td><td>Saturday</td>
-					<tr><td>weekend exam weight   </td><td>10%</td>
-					<tr><td>final exam weight</td><td>20%</td>
-					<tr><td>passing criterion</td><td>80%</td>
+						<tr>
+							<td>credits</td>
+							<td>2</td>
+						<tr>
+							<td>Modules weight</td>
+							<td>50%</td>
+						<tr>
+							<td>weekend</td>
+							<td>Saturday</td>
+						<tr>
+							<td>weekend exam weight</td>
+							<td>10%</td>
+						<tr>
+							<td>final exam weight</td>
+							<td>20%</td>
+						<tr>
+							<td>passing criterion</td>
+							<td>80%</td>
 					</table>
-					
+
 				</div>
 			</div>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h3 class="modal-title" id="myModalLabel">Course Form</h3>
-				</div>
-				<div class="modal-body">
-					<div class="details">
-						<form role="form">
-							<div class="form-group">
-								<label>Learning Objective* :</label> <input type="text"
-									required="required" class="form-control" id="lo">
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Introduction*</label> <input type="text"
-										required="required" class="form-control" id="intro">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>videos/images links</label> <input type="text"
-										class="form-control" id="links">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Examples</label> <input type="text"
-										class="form-control" id="example">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Problem Set</label> <input type="text"
-										required="required" class="form-control" id="ps">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Evaluation criteria</label> <input type="text"
-										class="form-control" id="links">
-								</div>
-							</div>
-						<center><button id="myBtn" type="submit" class="btn btn-default">Submit</button></center>
-						</form>
-					</div>
-				</div>
-				<script src="resources/js/jquery.min.js"></script>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="weekModal" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h3 class="modal-title" id="myModalLabel">Week Form</h3>
-					</div>
-					<div class="modal-body">
-						<div class="details">
-							<form role="form" action="create_course" method="post">
-								<div class="form-group">
-
-									<label>Course ID* :</label> <input type="text" name="cid"
-										required="required" readonly="readonly" class="form-control" id="cid" value="<%=request.getSession().getAttribute("cid")%>"><br>
-									<label>Week Number* :</label> <input type="text" name="wno"
-										required="required" class="form-control" id="cname">
-
-								</div>
-								<div class="form-group">
-									<div class="hero-unit">
-										<label>Start Date*:</label> <input type="date" required="required"
-											class="form-control" id="sdate" name="sdate">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="hero-unit">
-										<label>End Date*:</label> <input type="date" required="required"
-											class="form-control" id="edate" name="edate">
-									</div>
-								</div>
-
-								<center><button id="myBtn" type="submit" class="btn btn-default"
-									onclick="values()">Submit</button></center>
-							</form>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title" id="myModalLabel">Course Form</h3>
 						</div>
-
+						<div class="modal-body">
+							<div class="details">
+								<form role="form">
+									<div class="form-group">
+										<label>Learning Objective* :</label> <input type="text"
+											required="required" class="form-control" id="lo">
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Introduction*</label> <input type="text"
+												required="required" class="form-control" id="intro">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>videos/images links</label> <input type="text"
+												class="form-control" id="links">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Examples</label> <input type="text"
+												class="form-control" id="example">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Problem Set</label> <input type="text"
+												required="required" class="form-control" id="ps">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Evaluation criteria</label> <input type="text"
+												class="form-control" id="links">
+										</div>
+									</div>
+									<center>
+										<button id="myBtn" type="submit" class="btn btn-default">Submit</button>
+									</center>
+								</form>
+							</div>
+						</div>
+						<script src="resources/js/jquery.min.js"></script>
 					</div>
-					<script src="resources/js/jquery.min.js"></script>
-					<script src="resources/js/bootstrap-datepicker.js"></script>
-					<script type="text/javascript">
-						// When the document is ready
-						$(document).ready(function() {
-
-							$('#example1').datepicker({
-								format : "dd/mm/yyyy"
-							});
-
-						});
-					</script>
-					<script type="text/javascript">
-						var form = $('#weekModal');
-						form.submit(function(ev) {
-							$.ajax({
-								type : form.attr('method'),
-								url : form.attr('action'),
-								data : form.serialize(),
-								success : function(data) {
-									window.location.reload();
-								}
-							});
-						});
-					</script>
 				</div>
 			</div>
-		</div>
-	
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h3 class="modal-title" id="myModalLabel">Course Form</h3>
-				</div>
-				<div class="modal-body">
-					<div class="details">
-						<form role="form">
-							<div class="form-group">
-								<label>Module number* :</label> <input type="text"
-									required="required" class="form-control" id="lo">
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Module Name*</label> <input type="text"
-										required="required" class="form-control" id="intro">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Date</label> <input type="text"
-										class="form-control" id="links">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>Day</label> <input type="text"
-										class="form-control" id="example">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>No. of tasks</label> <input type="text"
-										required="required" class="form-control" id="ps">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>session</label> <input type="text"
-										class="form-control" id="links">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="hero-unit">
-									<label>deadline</label> <input type="text"
-										class="form-control" id="links">
-								</div>
-							</div>
-						<center><button id="myBtn" type="submit" class="btn btn-default">Submit</button></center>
-						</form>
-					</div>
+			<div class="modal fade" id="weekModal" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title" id="myModalLabel">Week Form</h3>
+						</div>
+						<div class="modal-body">
+							<div class="details">
+								<form role="form" action="create_course" method="post">
+									<div class="form-group">
 
+										<label>Course ID* :</label> <input type="text" name="cid"
+											required="required" readonly="readonly" class="form-control"
+											id="cid"
+											value="<%=request.getSession().getAttribute("cid")%>"><br>
+										<label>Week Number* :</label> <input type="text" name="wno"
+											required="required" class="form-control" id="cname">
+
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Start Date*:</label> <input type="date"
+												required="required" class="form-control" id="sdate"
+												name="sdate">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>End Date*:</label> <input type="date"
+												required="required" class="form-control" id="edate"
+												name="edate">
+										</div>
+									</div>
+
+									<center>
+										<button id="myBtn" type="submit" class="btn btn-default"
+											onclick="values()">Submit</button>
+									</center>
+								</form>
+							</div>
+
+						</div>
+						<script src="resources/js/jquery.min.js"></script>
+						<script src="resources/js/bootstrap-datepicker.js"></script>
+						<script type="text/javascript">
+							// When the document is ready
+							$(document).ready(function() {
+
+								$('#example1').datepicker({
+									format : "dd/mm/yyyy"
+								});
+
+							});
+						</script>
+						<script type="text/javascript">
+							var form = $('#weekModal');
+							form.submit(function(ev) {
+								$.ajax({
+									type : form.attr('method'),
+									url : form.attr('action'),
+									data : form.serialize(),
+									success : function(data) {
+										window.location.reload();
+									}
+								});
+							});
+						</script>
+					</div>
 				</div>
-				<script src="resources/js/jquery.min.js"></script>
-				
 			</div>
-		</div>
-	</div>
-	
+
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title" id="myModalLabel">Course Form</h3>
+						</div>
+						<div class="modal-body">
+							<div class="details">
+								<form role="form">
+									<div class="form-group">
+										<label>Module number* :</label> <input type="text"
+											required="required" class="form-control" id="lo">
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Module Name*</label> <input type="text"
+												required="required" class="form-control" id="intro">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Date</label> <input type="text" class="form-control"
+												id="links">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>Day</label> <input type="text" class="form-control"
+												id="example">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>No. of tasks</label> <input type="text"
+												required="required" class="form-control" id="ps">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>session</label> <input type="text"
+												class="form-control" id="links">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="hero-unit">
+											<label>deadline</label> <input type="text"
+												class="form-control" id="links">
+										</div>
+									</div>
+									<center>
+										<button id="myBtn" type="submit" class="btn btn-default">Submit</button>
+									</center>
+								</form>
+							</div>
+
+						</div>
+						<script src="resources/js/jquery.min.js"></script>
+
+					</div>
+				</div>
+			</div>
+
 
 		</div>
 		<!-- /.container-fluid -->

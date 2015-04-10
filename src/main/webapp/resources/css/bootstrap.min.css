@@ -5106,8 +5106,8 @@ border-bottom-right-radius
 }
 
 .navbar-inverse {
-	background-color: #8080c0;
-	border-color: #800040;
+	background-color: #408080;
+	border-color: #98cbcb;
 	color: white;
 }
 
@@ -5126,7 +5126,7 @@ border-bottom-right-radius
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color: #400040;
+	color: #ffffcc;
 	font-weight: bold;
 	font-family: Rockwell;
 }
