@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ProfileController {
 	
-	@RequestMapping("/profile.html")
+	@RequestMapping("/profile")
 	public String getProfile(ModelAndView modelView)
 	{
 		modelView.setViewName("profile");
