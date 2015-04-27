@@ -200,23 +200,25 @@
 					}
 					%>
 				</c:if>
-		</div>
-				<div style="text-align: center" class="form-buttons-wrapper">
-					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-						data-toggle="modal" data-target="#myModal">Add Course</button>
-				</div>
+			</div>
+			<div style="text-align: center" class="form-buttons-wrapper">
+				<button type="button" id="addcourse" class="btn btn-primary btn-lg"
+					data-toggle="modal" data-target="#myModal">Add Course</button>
+			</div>
 
 		</div>
 		<%
 			if(request.getParameter("course_create")!=null)
 			{
-				%>		<script type="text/javascript"> alert("The course is duplicate. ")</script><%
+				%>
+		<script type="text/javascript"> alert("The course is duplicate. ")</script>
+		<%
 			}
 		%>
-		
+
 		<!-- /.container-fluid -->
 		<!-- Modal -->
-		
+
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 			aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
@@ -287,7 +289,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- /#page-wrapper -->
 
 	<!-- jQuery -->
@@ -299,6 +301,6 @@
 
 	<!-- Flot Charts JavaScript -->
 	<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-	
+
 </body>
 </html>

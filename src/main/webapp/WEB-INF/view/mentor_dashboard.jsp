@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +28,8 @@
 <link href="resources/css/todo.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-	type="text/css">
+<link href="resources/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,7 +71,7 @@
 
 		<!-- Navigation -->
 		<div id="header"></div>
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
 			<div class="container-fluid">
 
@@ -153,7 +153,7 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-					<h3>To Do</h3>
+						<h3>To Do</h3>
 						<div class="panel panel-danger ">
 							<div class="panel-heading">
 								<form class="form-group" id="newTaskForm">

@@ -28,7 +28,7 @@ $(document).on('ready', function () {
             $('#newTaskForm,  #newListItem').fadeToggle('fast', 'linear');
 
             //append the new task to the new list
-            $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + task.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
+            $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + task.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-down"></span></li></a>');
         }
     };
     
@@ -73,7 +73,7 @@ $(document).on('ready', function () {
         e.preventDefault();
         var task = this;
         task.id = "archived";
-        var changeIcon = task.outerHTML.replace('glyphicon-arrow-right', 'glyphicon-remove');
+        var changeIcon = task.outerHTML.replace('glyphicon-arrow-down', 'glyphicon-remove');
         advanceTask(task);
         $('#archivedList').append(changeIcon);
     });
@@ -93,9 +93,9 @@ populates each list according to task id */
         var storedList = JSON.parse(localStorage.getItem("listo"));
         for (var i = 0; i < storedList.length; i++) {
             if (storedList[i].id === 'new') {
-                $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
+                $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-down"></span></li></a>');
             } else if (storedList[i].id === 'inProgress') {
-                $('#currentList').append('<a href="#finish" class="" id="inProgress"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span></li></a>');
+                $('#currentList').append('<a href="#finish" class="" id="inProgress"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-down"></span></li></a>');
             } else {
                 $('#archivedList').append('<a href="#finish" class="" id="archived"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-remove"></i></span></li></a>');
             }
