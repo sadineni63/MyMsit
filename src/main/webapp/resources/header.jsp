@@ -52,7 +52,7 @@
                         <a href="courses.html"><i class="fa fa-fw fa-bar-chart-o"></i> Courses</a>
                     </li>
                     <li>
-                        <a href="profile.html"><i class="fa fa-fw fa-bar-chart-o"></i> Profile</a>
+                        <a href="profile"><i class="fa fa-fw fa-bar-chart-o"></i> Profile</a>
                     </li>
                     <li>
                         <a href="batchmates.html"><i class="fa fa-fw fa-bar-chart-o"></i> Batch Mates</a>
