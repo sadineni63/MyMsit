@@ -46,7 +46,7 @@
                         <a href="notifications.html"><i class="fa fa-fw fa-bell"></i> Notifications</a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-calendar"></i> Calendar</a>
+                        <a href="calendar.html"><i class="fa fa-fw fa-calendar"></i> Calendar</a>
                     </li>
                     <li>
                         <a href="courses.html"><i class="fa fa-fw fa-bar-chart-o"></i> Courses</a>

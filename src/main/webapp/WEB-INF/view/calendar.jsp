@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,8 +23,8 @@
 <link href="resources/css/plugins/morris.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-	type="text/css">
+<link href="resources/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,40 +39,32 @@
 		$("#header").load("resources/header.jsp");
 	});
 </script>
-<link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="resources/font-awesome/css/font-awesome.css"
+	rel="stylesheet">
 <link href="resources/css/notifications.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div id="wrapper">
 
-		<!-- Navigation -->
-		<!-- Navigation -->
-		<div id="header"></div>
-	
+	<div id="wrapper">
 		<div id="page-wrapper">
 
-			<div class="container-fluid">
+			<!-- Navigation -->
 
-				<!-- Page Heading -->
-				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="page-header">Profile</h1>
-						<ol class="breadcrumb">
-							<li class="active"><i class="fa fa-dashboard"></i> Dashboard
-							</li>
-							<li class="active"><i class="glyphicon glyphicon-bell"></i>
-								Profile</li>
-						</ol>
-					</div>
+			<!-- Navigation -->
+			<div id="header"></div>
+			<div class="row">
+				<div class="col-lg-12" style="margin-left: -2%">
+					<iframe src="http://teamup.com/ksb1b39be7d1bbdd55?view=m"
+						frameborder="0" width="100%" height="525"></iframe>
 				</div>
-				<div class="container">
-				</div>
+
 			</div>
+
+
 		</div>
 	</div>
-	<!-- /#wrapper -->
 
 	<!-- jQuery -->
 	<script src="resources/js/jquery.js"></script>

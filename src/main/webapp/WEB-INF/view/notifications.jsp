@@ -12,13 +12,10 @@
 <meta name="author" content="">
 
 <title>Notifications</title>
-
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Custom CSS -->
 <link href="resources/css/sb-admin.css" rel="stylesheet">
-
 <!-- Morris Charts CSS -->
 <link href="resources/css/plugins/morris.css" rel="stylesheet">
 

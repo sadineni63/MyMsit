@@ -25,18 +25,15 @@ public class CourseDAO {
 
 	public int createCourseDetails(String cid, String cname, String sdate,
 			String edate) {
-		try
-		{
-		String SQL = "INSERT INTO courses(c_id,c_name,s_date,e_date) VALUES (:c_id, :c_name, :s_date,:e_date)";
-		Map<String, String> namedParameters = new HashMap<String, String>();
-		namedParameters.put("c_id", cid);
-		namedParameters.put("c_name", cname);
-		namedParameters.put("s_date", sdate.toString());
-		namedParameters.put("e_date", edate.toString());
-		return jdbcTempalte.update(SQL, namedParameters);
-		}
-		catch(DuplicateKeyException e)
-		{
+		try {
+			String SQL = "INSERT INTO courses(c_id,c_name,s_date,e_date) VALUES (:c_id, :c_name, :s_date,:e_date)";
+			Map<String, String> namedParameters = new HashMap<String, String>();
+			namedParameters.put("c_id", cid);
+			namedParameters.put("c_name", cname);
+			namedParameters.put("s_date", sdate.toString());
+			namedParameters.put("e_date", edate.toString());
+			return jdbcTempalte.update(SQL, namedParameters);
+		} catch (DuplicateKeyException e) {
 			return 0;
 		}
 	}

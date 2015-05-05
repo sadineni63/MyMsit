@@ -200,19 +200,24 @@
 					}
 					%>
 				</c:if>
-		</div>
+	
+			</div>
 				<div style="text-align: center" class="form-buttons-wrapper">
 					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
 						data-toggle="modal" data-target="#myModal">Add Course</button>
 				</div>
-
-		</div>
+					
 		<%
 			if(request.getParameter("course_create")!=null)
 			{
-				%>		<script type="text/javascript"> alert("The course is duplicate. ")</script><%
+				%>		<div style="text-align: center" class="form-buttons-wrapper">
+						<label style="color: red">Course Can't be Created. Duplicate Course ID</label>
+						</div>
+						<%
 			}
 		%>
+		</div>
+		
 		
 		<!-- /.container-fluid -->
 		<!-- Modal -->
