@@ -75,8 +75,8 @@
 				}
 			});
 	$(document).ready(function() {
-		$('.panel-heading span.clickable').click();
-		$('.panel div.clickable').click();
+// 		$('.panel-heading span.clickable').click();
+// 		$('.panel div.clickable').click();
 	});
 </script>
 </head>
