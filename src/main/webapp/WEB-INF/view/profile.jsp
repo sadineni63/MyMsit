@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-<<<<<<< HEAD
     pageEncoding="ISO-8859-1"%>
-=======
 	pageEncoding="ISO-8859-1"%>
 
->>>>>>> origin/master
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +13,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<<<<<<< HEAD
-<title>Blank Page</title>
-=======
+<title>Profile</title>
 <title>Dashboard</title>
->>>>>>> origin/master
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -46,27 +40,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript" src="resources/js/jquery.js"></script>
-<<<<<<< HEAD
 <script type="text/javascript" src="resources/js/notifications.js"></script>
-=======
 
 <script type="text/javascript" src="resources/js/todo.js"></script>
 
 
->>>>>>> origin/master
 <script>
 	$(function() {
 		$("#header").load("resources/header.jsp");
 	});
 </script>
-<<<<<<< HEAD
 <link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet">
 <link href="resources/css/notifications.css" rel="stylesheet">
 </head>
 
 <body>
 
-=======
 
 </head>
 
@@ -86,7 +75,6 @@
 			
 		</script>
 	</div>
->>>>>>> origin/master
 	<div id="wrapper">
 
 		<!-- Navigation -->
@@ -103,9 +91,7 @@
 						<h1 class="page-header">Profile</h1>
 					</div>
 				</div>
-<<<<<<< HEAD
 				<div class="container">
-=======
 				<div class="row">
 					<div class="col-md-3">
 						<img class="img-circle" src="resources/img/download.jpg"><br>
@@ -150,18 +136,15 @@
 
 					</div>
 
->>>>>>> origin/master
 				</div>
 			</div>
 
 		</div>
-<<<<<<< HEAD
 	</div>
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
 	<script src="resources/js/jquery.js"></script>
-=======
 		<!-- row -->
 		<div class="modal fade" id="editprofileModal" tabindex="-1"
 			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -210,7 +193,6 @@
 						</div>
 					</div>
 					
->>>>>>> origin/master
 
 				</div>
 

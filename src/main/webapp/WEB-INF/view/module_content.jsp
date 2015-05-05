@@ -1,21 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-<<<<<<< HEAD
     pageEncoding="ISO-8859-1"%>
 =======
 	pageEncoding="ISO-8859-1"%>
 
->>>>>>> origin/master
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta charset="utf-8">
-<<<<<<< HEAD
-=======
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
->>>>>>> origin/master
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
@@ -60,16 +55,10 @@
 		<!-- Navigation -->
 		<!-- Navigation -->
 		<div id="header"></div>
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
 		<div id="page-wrapper">
 
 			<div class="container-fluid">
 
-<<<<<<< HEAD
-=======
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-8">
@@ -108,7 +97,6 @@
 						</center>
 					</div>
 				</div>
->>>>>>> origin/master
 			</div>
 			<!-- /.container-fluid -->
 

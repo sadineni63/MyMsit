@@ -200,7 +200,6 @@
 					}
 					%>
 				</c:if>
-<<<<<<< HEAD
 	
 			</div>
 				<div style="text-align: center" class="form-buttons-wrapper">
@@ -220,7 +219,6 @@
 		</div>
 		
 		
-=======
 			</div>
 			<div style="text-align: center" class="form-buttons-wrapper">
 				<button type="button" id="addcourse" class="btn btn-primary btn-lg"
@@ -237,7 +235,6 @@
 			}
 		%>
 
->>>>>>> origin/master
 		<!-- /.container-fluid -->
 		<!-- Modal -->
 
