@@ -39,7 +39,7 @@
     <![endif]-->
 <script type="text/javascript" src="resources/js/jquery.js"></script>
 
-<script type="text/javascript" src="resources/js/todo.js"></script>
+<script type="text/javascript" src="resources/js/mentor_todo.js"></script>
 
 
 <script>
@@ -213,7 +213,7 @@
 	<script src="resources/js/plugins/morris/morris.min.js"></script>
 	<script src="resources/js/plugins/morris/morris-data.js"></script>
 	<script src="resources/http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
-	<script src="resources/js/todo.js"></script>
+	<script src="resources/js/mentor_todo.js"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push([ '_setAccount', 'UA-36251023-1' ]);

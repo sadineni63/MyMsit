@@ -74,7 +74,7 @@
 						<ol class="breadcrumb">
 							<li><i class="fa fa-dashboard"></i> <a href="dashboard.html">Dashboard</a>
 							</li>
-							<li class="active"><i class="fa fa-bar-chart-o"></i> Courses
+							<li class="active"><i class="fa fa-book"></i> Courses
 							</li>
 						</ol>
 					</div>

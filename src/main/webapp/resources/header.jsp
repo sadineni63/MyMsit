@@ -49,16 +49,16 @@
                         <a href="calendar.html"><i class="fa fa-fw fa-calendar"></i> Calendar</a>
                     </li>
                     <li>
-                        <a href="courses.html"><i class="fa fa-fw fa-bar-chart-o"></i> Courses</a>
+                        <a href="courses.html"><i class="fa fa-fw fa-book"></i> Courses</a>
                     </li>
                     <li>
-                        <a href="profile"><i class="fa fa-fw fa-bar-chart-o"></i> Profile</a>
+                        <a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
                     <li>
-                        <a href="batchmates.html"><i class="fa fa-fw fa-bar-chart-o"></i> Batch Mates</a>
+                        <a href="batchmates.html"><i class="fa fa-fw fa-users"></i> Batch Mates</a>
                     </li>
                     <li>
-                        <a href="mentors.html"><i class="fa fa-fw fa-bar-chart-o"></i> Mentors</a>
+                        <a href="mentors.html"><i class="fa fa-fw fa-user-md"></i> Mentors</a>
                     </li>
                 </ul>
             </div>

@@ -61,7 +61,10 @@
 
 				<!-- Page Heading -->
 				<div class="row">
-					<div class="col-lg-8">
+				<div class="col-lg-8">
+				<label>Course:</label><input readonly = "readonly">
+				<label>Module:</label><input type = "text" readonly = "readonly">
+				<label>Week:</label><input type = "text" readonly = "readonly"><br><br>
 						<div class="hero-unit">
 							<label>Introduction: </label>
 							<textarea class="form-control" rows="2" id="comment"></textarea>

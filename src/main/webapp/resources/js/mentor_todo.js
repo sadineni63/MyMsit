@@ -5,7 +5,7 @@ $(document).on('ready', function () {
     //a normal js array that is used for temporary storage.
     //this array has to constantly be save to the local storage to have 
     //persisiting data
-    var listo = [];
+    var list1 = [];
     
     //A constructor for making task objects
     var Task = function (task) {
@@ -18,7 +18,7 @@ $(document).on('ready', function () {
             // Uses the Task Constructor function to make a task object
             task = new Task(task);
             // This adds the item to local storage by pushing it to the array
-            listo.push(task);
+            list1.push(task);
             save();
             
             //----------- JQuery functions --------------
@@ -90,7 +90,7 @@ $(document).on('ready', function () {
     /* Gets the array listo stored on local storage and
 populates each list according to task id */
     var populateLists = function () {
-        var storedList = JSON.parse(localStorage.getItem("listo"));
+        var storedList = JSON.parse(localStorage.getItem("list1"));
         for (var i = 0; i < storedList.length; i++) {
             if (storedList[i].id === 'new') {
                 $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + storedList[i].task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-down"></span></li></a>');
@@ -104,22 +104,22 @@ populates each list according to task id */
 
     /* Checks local storage for the array "listo"
     on page load and will call populate lists if listo is found */
-    if (localStorage.getItem("listo")) {
-        listo = JSON.parse(localStorage["listo"]);
+    if (localStorage.getItem("list1")) {
+        list1 = JSON.parse(localStorage["list1"]);
         populateLists();
     }
 
     //A function that identifies tasks and changes their id 
     var advanceTask = function (task) {
         var modified = task.innerText.trim();
-        for (var i = 0; i < listo.length; i++) {
-            if (listo[i].task === modified) {
-                if (listo[i].id === 'new') {
-                    listo[i].id = 'inProgress';
-                } else if (listo[i].id === 'inProgress') {
-                    listo[i].id = 'archived';
+        for (var i = 0; i < list1.length; i++) {
+            if (list1[i].task === modified) {
+                if (list1[i].id === 'new') {
+                    list1[i].id = 'inProgress';
+                } else if (list1[i].id === 'inProgress') {
+                    list1[i].id = 'archived';
                 } else {
-                    listo.splice(i, 1);
+                    list1.splice(i, 1);
                 }
                 save();
                 break;
@@ -130,7 +130,7 @@ populates each list according to task id */
 
     //Saves the array listo to local storage;
     var save = function () {
-        localStorage["listo"] = JSON.stringify(listo);
+        localStorage["list1"] = JSON.stringify(list1);
     };
 
     //JQuery watcher 
