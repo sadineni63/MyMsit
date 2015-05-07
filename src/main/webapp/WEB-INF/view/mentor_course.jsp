@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.mymsit.course.Course"%>
@@ -218,11 +217,7 @@
 		%>
 		</div>
 		
-		
-			</div>
-			<div style="text-align: center" class="form-buttons-wrapper">
-				<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-					data-toggle="modal" data-target="#myModal">Add Course</button>
+		q
 			</div>
 
 		</div>
@@ -307,7 +302,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 
 	<!-- /#page-wrapper -->
 
