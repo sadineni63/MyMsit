@@ -247,13 +247,13 @@
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>Start Date:</label> <input type="date"
+										<label>Start Date:</label> <input type="date" required="required"
 											class="form-control" id="sdate" name="sdate">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>End Date:</label> <input type="date"
+										<label>End Date:</label> <input type="date" required="required"
 											class="form-control" id="edate" name="edate">
 									</div>
 								</div>
