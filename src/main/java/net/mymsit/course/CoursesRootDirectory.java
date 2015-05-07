@@ -1,6 +1,5 @@
 package net.mymsit.course;
 
-import java.io.File;
 
 public class CoursesRootDirectory {
 	

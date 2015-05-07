@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import net.mymsit.course.Course;
 import net.mymsit.course.CoursesRootDirectory;
+import net.mymsit.course.DirectoryManager;
 import net.mymsit.course.ResourcePathResolver;
 import net.mymsit.dao.CourseDAO;
 
@@ -70,16 +71,15 @@ public class CourseController {
 		String eDate = request.getParameter("edate");
 		int status = courseDAO.createCourseDetails(cid, cname, sDate, eDate);
 		if (status == 1) {
-				Files.createDirectory(Paths.get(CoursesRootDirectory.URI+"//"+cid));
+			new DirectoryManager().createCourseDirectory(cid);
 				return "redirect:/mentor_course";
 		} else {
 			return "redirect:/mentor_course?course_create=failed";
 		}
 	}
-	
+
 	@RequestMapping("/create_week")
-	public String createWeek(HttpServletRequest request)
-			throws ParseException {
+	public String createWeek(HttpServletRequest request) throws ParseException {
 		String cid = request.getParameter("cid");
 		int week = Integer.parseInt(request.getParameter("cname").toString());
 		String sDate = request.getParameter("sdate");
@@ -97,17 +97,12 @@ public class CourseController {
 	public String moduleContent(HttpServletRequest request) {
 		return "module_content";
 	}
-	
+
 	@RequestMapping("create_module")
-	public String createModuleContent(HttpServletRequest request)
-	{
-		String cid=request.getParameter("course_id");
-		String week=request.getParameter("week");
-		String module=request.getParameter("module");
-		
-		
-		
-		
+	public String createModuleContent(HttpServletRequest request) {
+		String cid = request.getParameter("course_id");
+		String week = request.getParameter("week");
+		String module = request.getParameter("module");
 		return "";
 	}
 }
