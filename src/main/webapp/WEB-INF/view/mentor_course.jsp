@@ -218,19 +218,6 @@
 		%>
 		</div>
 		
-		q
-			</div>
-
-		</div>
-		<%
-			if(request.getParameter("course_create")!=null)
-			{
-				%>
-		<script type="text/javascript"> alert("The course is duplicate. ")</script>
-		<%
-			}
-		%>
-
 		<!-- /.container-fluid -->
 		<!-- Modal -->
 
