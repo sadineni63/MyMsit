@@ -218,11 +218,7 @@
 		%>
 		</div>
 		
-		
-			</div>
-			<div style="text-align: center" class="form-buttons-wrapper">
-				<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-					data-toggle="modal" data-target="#myModal">Add Course</button>
+		q
 			</div>
 
 		</div>
