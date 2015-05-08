@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.mymsit.course.Course"%>
@@ -218,23 +218,6 @@
 		%>
 		</div>
 		
-		
-			</div>
-			<div style="text-align: center" class="form-buttons-wrapper">
-				<button type="button" id="addcourse" class="btn btn-primary btn-lg"
-					data-toggle="modal" data-target="#myModal">Add Course</button>
-			</div>
-
-		</div>
-		<%
-			if(request.getParameter("course_create")!=null)
-			{
-				%>
-		<script type="text/javascript"> alert("The course is duplicate. ")</script>
-		<%
-			}
-		%>
-
 		<!-- /.container-fluid -->
 		<!-- Modal -->
 
@@ -262,13 +245,13 @@
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>Start Date:</label> <input type="date"
+										<label>Start Date:</label> <input type="date" required="required"
 											class="form-control" id="sdate" name="sdate">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>End Date:</label> <input type="date"
+										<label>End Date:</label> <input type="date" required="required"
 											class="form-control" id="edate" name="edate">
 									</div>
 								</div>
@@ -307,7 +290,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+
 
 	<!-- /#page-wrapper -->
 

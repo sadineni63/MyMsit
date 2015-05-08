@@ -1,14 +1,6 @@
 package net.mymsit.course;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-import org.springframework.core.io.ClassPathResource;
-
-import com.fasterxml.jackson.core.format.InputAccessor;
 
 public class ResourcePathResolver {
 	String rootDirectory;
@@ -18,7 +10,7 @@ public class ResourcePathResolver {
 	String resource;
 	public ResourcePathResolver() {
 		// TODO Auto-generated constructor stub
-		rootDirectory="/"+CoursesRootDirectory.URI;
+		rootDirectory=CoursesRootDirectory.URI;
 	}
 	
 	public ResourcePathResolver(String cid) {
@@ -36,7 +28,7 @@ public class ResourcePathResolver {
 	
 	public ResourcePathResolver(String cid,int week,int module) {
 		// TODO Auto-generated constructor stub
-		rootDirectory="/"+CoursesRootDirectory.URI;
+		rootDirectory=CoursesRootDirectory.URI;
 		this.cid=cid;
 		this.week=week;
 		this.module=module;
@@ -44,7 +36,7 @@ public class ResourcePathResolver {
 	
 	public ResourcePathResolver(String cid,int week,int module,String resource) {
 		// TODO Auto-generated constructor stub
-		rootDirectory="/"+CoursesRootDirectory.URI;
+		rootDirectory=CoursesRootDirectory.URI;
 		this.cid=cid;
 		this.week=week;
 		this.module=module;
@@ -123,29 +115,28 @@ public class ResourcePathResolver {
 	
 	public String getCoursePath()
 	{
-		return rootDirectory+cid;
+		return rootDirectory+"//"+cid;
 	}
 	
 	public String getWeekPath()
 	{
-		return getCoursePath()+"Week"+week;
+		return getCoursePath()+"//Week"+week;
 	}
 	
 	public String getModulePath()
 	{
-		return getCoursePath()+"Module"+module;
+		return getCoursePath()+"//Module"+module;
 	}
 	
 	public String resourcePath()
 	{
-		return getModulePath()+resource;
+		return getModulePath()+"//"+resource;
 	}
 	
-	public static void main(String[] args) throws IOException {
-		File file = new File(CoursesRootDirectory.URI+"/mpleDirectory");
-		if(file.mkdirs())
-			System.out.println("Directory Created");
-		else
-			System.out.println("Directory is not Created");
+	public static void main(String[] args) {
+		File file = new File(CoursesRootDirectory.URI);
+		String absolutePath = file.getAbsolutePath();
+		System.out.println(absolutePath);
+		new File(CoursesRootDirectory.URI + "\\" + 10).mkdirs();
 	}
 }
