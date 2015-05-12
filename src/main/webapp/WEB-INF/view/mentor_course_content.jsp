@@ -71,7 +71,11 @@
 					$this.parents('.panel').find('.panel-body').slideDown();
 					$this.removeClass('panel-collapsed');
 					$this.find('i').removeClass('glyphicon-plus').addClass(
+<<<<<<< HEAD
+							'glyphicon-minus');a
+=======
 							'glyphicon-minus');
+>>>>>>> origin/master
 				}
 			});
 	$(document).ready(function() {
