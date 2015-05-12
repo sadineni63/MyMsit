@@ -95,6 +95,9 @@ public class CourseController {
 
 	@RequestMapping("/module_content.html")
 	public String moduleContent(HttpServletRequest request) {
+			if(request.getSession().getAttribute("role").toString().equalsIgnoreCase("student")){
+				return "student_content_display";
+		}
 		return "module_content";
 	}
 
