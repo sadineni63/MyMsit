@@ -43,7 +43,7 @@
                         <a href="dashboard.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="notifications.html"><i class="fa fa-fw fa-bell"></i> Notifications</a>
+                        <a href="notifications.html"><i class="fa fa-fw fa-bell"></i> Notifications <span class="badge">12</span></a>
                     </li>
                     <li>
                         <a href="calendar.html"><i class="fa fa-fw fa-calendar"></i> Calendar</a>
@@ -58,7 +58,7 @@
                         <a href="batchmates.html"><i class="fa fa-fw fa-users"></i> Batch Mates</a>
                     </li>
                     <li>
-                        <a href="mentors.html"><i class="fa fa-fw fa-user-md"></i> Mentors</a>
+                        <a href="mentorsprofile.html"><i class="fa fa-fw fa-user-md"></i> Mentors</a>
                     </li>
                 </ul>
             </div>
