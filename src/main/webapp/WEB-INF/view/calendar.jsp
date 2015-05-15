@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Notifications</title>
+<title>Calendar</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -23,8 +23,8 @@
 <link href="resources/css/plugins/morris.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-	type="text/css">
+<link href="resources/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,22 +33,20 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript" src="resources/js/jquery.js"></script>
-<script type="text/javascript" src="resources/js/jquery.min.js"></script>
 <script>
 	$(function() {
 		$("#header").load("resources/header.jsp");
 	});
 </script>
-<link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="resources/font-awesome/css/font-awesome.css"
+	rel="stylesheet">
 
 
-<link rel='stylesheet' href="resources/lib/cupertino/jquery-ui.min.css"/>
+<link rel='stylesheet' href="resources/lib/cupertino/jquery-ui.min.css" />
 <link href="resources/css/fullcalendar.css" rel="stylesheet" />
-<link href="resources/css/fullcalendar.print.css" rel="stylesheet" media="print" />
-<script src="resources/lib/moment.min.js"></script>
-<script src="resources/js/jquery.min.js"></script>
-<script src="resources/js/fullcalendar.js"></script>
-<script src="resources/js/fullcalendar.min.js"></script>
+<link href="resources/css/fullcalendar.print.css" rel="stylesheet"
+	media="print" />
+
 <script>
 
 	$(document).ready(function() {
@@ -125,27 +123,19 @@
 
 </script>
 <style>
+body {
+	margin: 40px 10px;
+	padding: 0;
+	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+}
 
-	body {
-		margin: 40px 10px;
-		padding: 0;
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		font-size: 14px;
-	}
-
-	#calendar {
-		max-width: 900px;
-		margin: 0 auto;
-	}
-
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}
 </style>
-
-
-
-
-
 </head>
-
 <body>
 
 	<div id="wrapper">
@@ -153,7 +143,7 @@
 		<!-- Navigation -->
 		<!-- Navigation -->
 		<div id="header"></div>
-	
+
 		<div id="page-wrapper">
 
 			<div class="container-fluid">
@@ -165,16 +155,15 @@
 						<ol class="breadcrumb">
 							<li class="active"><i class="fa fa-dashboard"></i> Dashboard
 							</li>
-							 <li class="active">
-                                <i class="glyphicon glyphicon-bell"></i> Calendar
-                            </li>
+							<li class="active"><i class="glyphicon glyphicon-bell"></i>
+								Calendar</li>
 						</ol>
 					</div>
 				</div>
 				<!-- /.row -->
-				
+
 				<div id='calendar'></div>
-				</div>
+			</div>
 			<!-- /.container-fluid -->
 
 		</div>
@@ -185,7 +174,9 @@
 
 	<!-- jQuery -->
 	<script src="resources/js/jquery.js"></script>
-
+	<script src="resources/lib/moment.min.js"></script>
+	<script src="resources/js/jquery.min.js"></script>
+	<script src="resources/js/fullcalendar.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
 	<script src="resources/js/bootstrap.min.js"></script>
 
