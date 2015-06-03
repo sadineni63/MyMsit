@@ -32,44 +32,13 @@ public class LoginRequestHandler {
 		loginDao = (LoginDAO) factory.getBean("loginDAO");
 	}
 	
-	@RequestMapping("/create")
-	public String greateForm(HttpServletRequest request) {
-		if(request.isRequestedSessionIdValid())
-		return "create_login";
-		else
-			return "redirect:/Login/signin";
-	}
-
 	@RequestMapping("/signin")
 	public String loginInForm(HttpServletRequest request) {
 		if(request.getSession().getAttribute("username")!=null)
 			return "redirect:/dashboard";
 		return "login";
 	}
-	@RequestMapping("/create.do")
-	public String createLoginDetails(HttpServletRequest request) {
-		if(!request.isRequestedSessionIdValid())
-			return "redirect:/Login/signin";
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		String role = request.getParameter("role");
-		String c = request.getParameter("learning_center");
-		LearningCenter center = LearningCenter.valueOf(c);
-		password = BCrypt.hashpw(password, BCrypt.gensalt(13));
-		int success = 0;
-		try {
-			success = loginDao.createLoginDetails(username, password, role,
-					center);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		if (success == 0)
-			request.getSession().setAttribute("logincreated", "false");
-		else
-			request.getSession().setAttribute("logincreated", "true");
-		return "create_login";
-	}
-
+	
 	@RequestMapping("/signin.do")
 	public String signInUser(HttpServletRequest request) throws IOException {
 		
