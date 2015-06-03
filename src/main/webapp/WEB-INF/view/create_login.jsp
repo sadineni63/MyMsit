@@ -3,23 +3,23 @@
 <html>
 <head>
 <title>Login Creation</title>
-<link href="../resources/css/create_login.css" rel="stylesheet">
+<link href="resources/css/create_login.css" rel="stylesheet">
 
 <!-- Bootstrap Core CSS -->
-<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+<link href=" resources/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="../resources/css/sb-admin.css" rel="stylesheet">
+<link href=" resources/css/sb-admin.css" rel="stylesheet">
 
 <!-- Morris Charts CSS -->
-<link href="../resources/css/plugins/morris.css" rel="stylesheet">
+<link href=" resources/css/plugins/morris.css" rel="stylesheet">
 
-<link href="../resources/css/dashboard.css" rel="stylesheet">
+<link href="resources/css/dashboard.css" rel="stylesheet">
 
-<link href="../resources/css/todo.css" rel="stylesheet">
+<link href="resources/css/todo.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="../resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+<link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,9 +28,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script type="text/javascript" src="../resources/js/jquery.js"></script>
+<script type="text/javascript" src="resources/js/jquery.js"></script>
 
-<script type="text/javascript" src="../resources/js/todo.js"></script>
+<script type="text/javascript" src="resources/js/todo.js"></script>
 <script type="text/javascript">
 
 $(function() {
@@ -142,17 +142,17 @@ $(function() {
 		</div>
 	</div>
 	</div>
-	<script src="../resources/js/jquery.js"></script>
+	<script src=" resources/js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="../resources/js/bootstrap.min.js"></script>
+	<script src=" resources/js/bootstrap.min.js"></script>
 
 	<!-- Morris Charts JavaScript -->
-	<script src="../resources/js/plugins/morris/raphael.min.js"></script>
-	<script src="../resources/js/plugins/morris/morris.min.js"></script>
-	<script src="../resources/js/plugins/morris/morris-data.js"></script>
-	<script src="../resources/http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
-	<script src="../resources/js/todo.js"></script>
+	<script src=" resources/js/plugins/morris/raphael.min.js"></script>
+	<script src=" resources/js/plugins/morris/morris.min.js"></script>
+	<script src=" resources/js/plugins/morris/morris-data.js"></script>
+	<script src=" resources/js/parse-1.3.0.min.js"></script>
+	<script src=" resources/js/todo.js"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push([ '_setAccount', 'UA-36251023-1' ]);

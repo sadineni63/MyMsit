@@ -1,5 +1,7 @@
 package net.mymsit.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+
 import net.mymsit.user.StudentRegistration;
 
 import org.jboss.netty.handler.codec.http.HttpRequest;
@@ -11,9 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProfileController {
 	
 	@RequestMapping("/profile")
-	public String getProfile(HttpRequest request,ModelAndView modelView)
+	public String getProfile(HttpServletRequest request,ModelAndView modelView)
 	{
-		Profile profile=
+		
 		modelView.setViewName("profile");
 		return "profile";
 	}
