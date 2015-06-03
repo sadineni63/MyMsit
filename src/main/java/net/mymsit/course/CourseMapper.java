@@ -15,8 +15,9 @@ public class CourseMapper implements RowMapper<Course> {
 		SimpleDateFormat format=new SimpleDateFormat("dd-MM-yyyy");
 		c.setCourseId(row.getString(1));
 		c.setCourse_Name(row.getString(2));
-		c.setsDate(format.format(row.getDate(3)).toString());
-		c.seteDate(format.format(row.getDate(4)).toString());
+		c.setNow(row.getInt(3));
+		c.setsDate(format.format(row.getDate(4)).toString());
+		c.seteDate(format.format(row.getDate(5)).toString());
 		return c;
 	}
 

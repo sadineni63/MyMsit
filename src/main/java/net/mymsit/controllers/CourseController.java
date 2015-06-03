@@ -1,10 +1,6 @@
 package net.mymsit.controllers;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.List;
 
@@ -12,14 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import net.mymsit.course.Course;
-import net.mymsit.course.CoursesRootDirectory;
+import net.mymsit.course.CourseWeek;
 import net.mymsit.course.DirectoryManager;
-import net.mymsit.course.ResourcePathResolver;
 import net.mymsit.dao.CourseDAO;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.PathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,39 +36,52 @@ public class CourseController {
 		HttpSession session = request.getSession();
 		if (session.getAttribute("username") == null)
 			return "redirect:/Login/signin";
-		else if (session.getAttribute("role").toString()
-				.equalsIgnoreCase("mentor")) {
+		else {
 			List<Course> courses = courseDAO.getCourseList();
 			view.addAttribute("courses", courses);
-			return "mentor_course";
-		} else {
-			List<Course> courses = courseDAO.getCourseList();
-			view.addAttribute("courses", courses);
-			return "courses";
+			if (session.getAttribute("role").toString()
+
+			.equalsIgnoreCase("mentor")) {
+
+				return "mentor_course";
+			} else {
+				return "courses";
+			}
 		}
 	}
 
 	@RequestMapping("/course_content.html")
-	public String courseContent(HttpServletRequest request) {
-		if (request.getSession().getAttribute("username") == null)
+	public String courseContent(HttpServletRequest request, Model view) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null)
 			return "redirect:/Login/signin";
-		return "course_content";
+		else {
+			String cid=request.getParameter("course_id");
+			List<CourseWeek> courseWeeks = courseDAO.getWeekDurations(cid);
+			view.addAttribute("courseWeeks", courseWeeks);
+			if (session.getAttribute("role").toString().equalsIgnoreCase("mentor")) {
+				return "mentor_course_content";
+			} else {
+				return "course_content";
+			}
+		}
 	}
 
 	@RequestMapping("/create_course")
 	public String createCourse(HttpServletRequest request)
 			throws ParseException, IOException {
-
 		String cid = request.getParameter("cid");
 		String cname = request.getParameter("cname");
+		int now = Integer.parseInt(request.getParameter("now"));
 		String sDate = request.getParameter("sdate");
 		String eDate = request.getParameter("edate");
-		int status = courseDAO.createCourseDetails(cid, cname, sDate, eDate);
+		int status = courseDAO.createCourseDetails(cid, cname, now, sDate,
+				eDate);
 		if (status == 1) {
 			new DirectoryManager().createCourseDirectory(cid);
-				return "redirect:/mentor_course";
+			return "redirect:/courses.html";
 		} else {
-			return "redirect:/mentor_course?course_create=failed";
+			return "redirect:/courses.html?course_create=failed";
 		}
 	}
 
@@ -86,8 +93,8 @@ public class CourseController {
 		String eDate = request.getParameter("edate");
 		int status = courseDAO.createWeeekDetails(cid, week, sDate, eDate);
 		if (status == 1) {
-			
-			return "course_content";
+			new DirectoryManager().createWeekDirectory(cid, week);
+			return "redirect:/course_content";
 		} else {
 			return "redirect:/course_content?week_create=failed";
 		}
@@ -103,6 +110,8 @@ public class CourseController {
 		String cid = request.getParameter("course_id");
 		String week = request.getParameter("week");
 		String module = request.getParameter("module");
+		
+		
 		return "";
 	}
 }

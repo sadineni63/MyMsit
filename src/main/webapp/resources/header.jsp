@@ -60,6 +60,14 @@
                     <li>
                         <a href="mentorsprofile.html"><i class="fa fa-fw fa-user-md"></i> Mentors</a>
                     </li>
+                    <% if(session.getAttribute("role").toString().equalsIgnoreCase("mentor"))
+                    {%>
+                    <li>
+                        <a href="mentorsprofile.html"><i class="fa fa-fw fa-user-md"></i> Users</a>
+                    </li>
+					<%
+                    }
+                    %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

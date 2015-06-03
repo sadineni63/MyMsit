@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*"%>
+<%@ page import="net.mymsit.course.CourseWeek"%>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,24 +71,18 @@
 					$this.parents('.panel').find('.panel-body').slideDown();
 					$this.removeClass('panel-collapsed');
 					$this.find('i').removeClass('glyphicon-plus').addClass(
-<<<<<<< HEAD
-							'glyphicon-minus');a
-=======
 							'glyphicon-minus');
->>>>>>> origin/master
 				}
 			});
 	$(document).ready(function() {
-// 		$('.panel-heading span.clickable').click();
-// 		$('.panel div.clickable').click();
+		// 		$('.panel-heading span.clickable').click();
+		// 		$('.panel div.clickable').click();
 	});
 </script>
 </head>
 
 <body>
 	<div id="wrapper">
-		<!-- Navigation -->
-		<!-- Navigation -->
 		<div id="header"></div>
 		<div id="page-wrapper">
 			<div class="container-fluid">
@@ -104,6 +98,58 @@
 					</div>
 				</div>
 				<!-- /.row -->
+				<%
+					if(request.getAttribute("courseWeeks")!=null)
+													{
+														List<CourseWeek> couseWeeks=(ArrayList<CourseWeek>)request.getAttribute("courseWeeks");
+														for(int i=0;i<couseWeeks.size();i++)
+														{
+				%>
+
+				<div class="row">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								Week-<%=i+1%>
+								<span class="start"> <%=couseWeeks.get(i).getsDate()%>
+								</span>to<span class="end"><%=couseWeeks.get(i).geteDate()%></span>
+							</h3>
+							<span class="pull-right clickable"><i
+								class="glyphicon glyphicon-minus"></i></span>
+						</div>
+						<div class="panel-body">
+							<div id="no-more-tables">
+								<table class="col-md-12 table table-striped table-condensed cf"
+									id="content">
+									<thead class="cf">
+										<tr>
+											<th class="numeric">Module No</th>
+											<th>Module Name</th>
+											<th>Date</th>
+											<th>Day</th>
+											<th class="numeric">No Of Tasks</th>
+											<th>Session</th>
+											<th>Deadline</th>
+											<th>Submissions Status</th>
+											<th>Update</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div style="text-align: center" class="form-buttons-wrapper">
+								<button type="button" id="addcourse"
+									class="btn btn-primary btn-lg" data-toggle="modal"
+									data-target="#myModal1">Add Module</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<%
+					}}
+				%>
+
+
 				<div class="row">
 					<div class="panel panel-info">
 						<div class="panel-heading">
@@ -149,7 +195,8 @@
 										</tr>
 										<tr>
 											<td data-title="Module No">2</td>
-											<td data-title="Module Name"><a href="module_content.html">Data Types</a></td>
+											<td data-title="Module Name"><a
+												href="module_content.html">Data Types</a></td>
 											<td data-title="Date" class="numeric">02-02-2015</td>
 											<td data-title="Day" class="numeric">Tuesday</td>
 											<td data-title="No Of Tasks" class="numeric">2</td>
@@ -161,7 +208,8 @@
 										</tr>
 										<tr>
 											<td data-title="Module No">3</td>
-											<td data-title="Module Name"><a href="module_content.html">Loops</a></td>
+											<td data-title="Module Name"><a
+												href="module_content.html">Loops</a></td>
 											<td data-title="Date" class="numeric">02-02-2015</td>
 											<td data-title="Day" class="numeric">Wednesday</td>
 											<td data-title="No Of Tasks" class="numeric">2</td>
@@ -173,7 +221,8 @@
 										</tr>
 										<tr>
 											<td data-title="Module No">4</td>
-											<td data-title="Module Name"><a href="module_content.html">Classes</a></td>
+											<td data-title="Module Name"><a
+												href="module_content.html">Classes</a></td>
 											<td data-title="Date" class="numeric">02-02-2015</td>
 											<td data-title="Day" class="numeric">Thursday</td>
 											<td data-title="No Of Tasks" class="numeric">2</td>
@@ -185,7 +234,8 @@
 										</tr>
 										<tr>
 											<td data-title="Module No">5</td>
-											<td data-title="Module Name"><a href="module_content.html">Objects</a></td>
+											<td data-title="Module Name"><a
+												href="module_content.html">Objects</a></td>
 											<td data-title="Date" class="numeric">02-02-2015</td>
 											<td data-title="Day" class="numeric">Friday</td>
 											<td data-title="No Of Tasks" class="numeric">2</td>
@@ -197,7 +247,8 @@
 										</tr>
 										<tr>
 											<td data-title="Module No">6</td>
-											<td data-title="Module Name"><a href="module_content.html">Inheritance</a></td>
+											<td data-title="Module Name"><a
+												href="module_content.html">Inheritance</a></td>
 											<td data-title="Date" class="numeric">02-02-2015</td>
 											<td data-title="Day" class="numeric">Saturday</td>
 											<td data-title="No Of Tasks" class="numeric">2</td>
@@ -217,35 +268,32 @@
 							</div>
 						</div>
 					</div>
-					<div style="text-align: center" class="form-buttons-wrapper">
-						<button type="button" id="addcourse"
-							class="btn btn-primary btn-lg" data-toggle="modal"
-							data-target="#weekModal">Add Week</button>
-					</div>
-					<h3>Grading Policy</h3>
-					<table id="grading" border=1>
-						<tr>
-							<td>credits</td>
-							<td>2</td>
-						<tr>
-							<td>Modules weight</td>
-							<td>50%</td>
-						<tr>
-							<td>weekend</td>
-							<td>Saturday</td>
-						<tr>
-							<td>weekend exam weight</td>
-							<td>10%</td>
-						<tr>
-							<td>final exam weight</td>
-							<td>20%</td>
-						<tr>
-							<td>passing criterion</td>
-							<td>80%</td>
-					</table>
+
 
 				</div>
+				<h3>Grading Policy</h3>
+				<table id="grading" border=1>
+					<tr>
+						<td>credits</td>
+						<td>2</td>
+					<tr>
+						<td>Modules weight</td>
+						<td>50%</td>
+					<tr>
+						<td>weekend</td>
+						<td>Saturday</td>
+					<tr>
+						<td>weekend exam weight</td>
+						<td>10%</td>
+					<tr>
+						<td>final exam weight</td>
+						<td>20%</td>
+					<tr>
+						<td>passing criterion</td>
+						<td>80%</td>
+				</table>
 			</div>
+
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 				aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
@@ -392,47 +440,59 @@
 						</div>
 						<div class="modal-body">
 							<div class="details">
-								<form role="form">
+								<form role="form" action="create_module" method="post">
+								<div class="form-group">
+										<label>Week number* :</label> <input type="text"
+											required="required" class="form-control" id="m_no"
+											name="m_no">
+									</div>
 									<div class="form-group">
 										<label>Module number* :</label> <input type="text"
-											required="required" class="form-control" id="lo">
+											required="required" class="form-control" id="m_no"
+											name="m_no">
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
 											<label>Module Name*</label> <input type="text"
-												required="required" class="form-control" id="intro">
+												required="required" class="form-control" id="m_name"
+												name="m_name">
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
 											<label>Date</label> <input type="date" required="required"
-												class="form-control" id="adate" name="adate">
+												class="form-control" id="m_date" name="m_date">
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
 											<label>Day</label> <input type="text" class="form-control"
-												id="example">
+												id="day" name="day">
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
 											<label>No. of tasks</label> <input type="text"
-												required="required" class="form-control" id="ps">
+												required="required" class="form-control" id="not" name="not">
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
-											<label>session</label> <input type="text"
-												class="form-control" id="links">
+											<label>Session</label> <input type="text"
+												class="form-control" id="session" name="session">
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="hero-unit">
 											<label>deadline</label> <input type="text"
-												class="form-control" id="links">
+												class="form-control" id="deadline" name="deadline">
 										</div>
 									</div>
+									<center>
+										<input id="myBtn" type="submit" value="Submit"
+											class="btn btn-default"
+											style="background-color: green; color: white;">
+									</center>
 
 								</form>
 							</div>
@@ -463,134 +523,54 @@
 								});
 							});
 						</script>
-						<center>
-							<button id="myBtn" type="submit" class="btn btn-default">Submit</button>
-						</center>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
-				aria-labelledby="myModalLabel2" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<h3 class="modal-title" id="myModalLabel2">Course Form</h3>
-						</div>
-						<div class="modal-body">
-							<div class="details">
-								<form role="form">
-									<div class="form-group">
-										<label>Module number* :</label> <input type="text"
-											required="required" class="form-control" id="lo">
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>Module Name*</label> <input type="text"
-												required="required" class="form-control" id="intro">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>Date</label><input type="date" required="required"
-												class="form-control" id="wdate" name="wdate">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>Day</label> <input type="text" class="form-control"
-												id="example">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>No. of tasks</label> <input type="text"
-												required="required" class="form-control" id="ps">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>session</label> <input type="text"
-												class="form-control" id="links">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="hero-unit">
-											<label>deadline</label> <input type="text"
-												class="form-control" id="links">
-										</div>
-									</div>
-								</form>
-							</div>
-
-						</div>
-						<script src="resources/js/jquery.min.js"></script>
-						<script src="resources/js/bootstrap-datepicker.js"></script>
-						<script type="text/javascript">
-							// When the document is ready
-							$(document).ready(function() {
-
-								$('#example1').datepicker({
-									format : "dd/mm/yyyy"
+			<script type="text/javascript">
+				$('#openBtn').click(function() {
+					$('#myModal2').modal({
+						show : true
+					})
+				});
+				$(".btn[data-target='#myModal2']")
+						.click(
+								function() {
+									var columnHeadings = $("thead th").map(
+											function() {
+												return $(this).text();
+											}).get();
+									columnHeadings.pop();
+									var columnValues = $(this).parent()
+											.siblings().map(function() {
+												return $(this).text();
+											}).get();
+									var modalBody = $('<div id="modalContent"></div>');
+									var modalForm = $('<form role="form" name="modalForm" action="mentor_course_content.jsp" method="post"></form>');
+									$
+											.each(
+													columnHeadings,
+													function(i, columnHeader) {
+														var formGroup = $('<div class="form-group"></div>');
+														formGroup
+																.append('<label for="'+columnHeader+'">'
+																		+ columnHeader
+																		+ '</label>');
+														formGroup
+																.append('<input class="form-control" name="'+columnHeader+i+'" id="'+columnHeader+i+'" value="'+columnValues[i]+'" />');
+														modalForm
+																.append(formGroup);
+													});
+									modalBody.append(modalForm);
+									$('.modal-body').html(modalBody);
 								});
-
-							});
-						</script>
-						<script type="text/javascript">
-							var form = $('#myModal2');
-							form.submit(function(ev) {
-								$.ajax({
-									type : form.attr('method'),
-									url : form.attr('action'),
-									data : form.serialize(),
-									success : function(data) {
-										window.location.reload();
-									}
-								});
-							});
-						</script>
-						<script type="text/javascript">
-						$('#openBtn').click(function(){
-							$('#myModal2').modal({show:true})
-						});$(".btn[data-target='#myModal2']").click(function() {
-						       var columnHeadings = $("thead th").map(function() {
-						                 return $(this).text();
-						              }).get();
-						       columnHeadings.pop();
-						       var columnValues = $(this).parent().siblings().map(function() {
-						                 return $(this).text();
-						       }).get();
-						  var modalBody = $('<div id="modalContent"></div>');
-						  var modalForm = $('<form role="form" name="modalForm" action="mentor_course_content.jsp" method="post"></form>');
-						  $.each(columnHeadings, function(i, columnHeader) {
-						       var formGroup = $('<div class="form-group"></div>');
-						       formGroup.append('<label for="'+columnHeader+'">'+columnHeader+'</label>');
-						       formGroup.append('<input class="form-control" name="'+columnHeader+i+'" id="'+columnHeader+i+'" value="'+columnValues[i]+'" />'); 
-						       modalForm.append(formGroup);
-						  });
-						  modalBody.append(modalForm);
-						  $('.modal-body').html(modalBody);
-						});
-						$('.modal-footer .btn-primary').click(function() {
-						   $('form[name="modalForm"]').submit();
-						});
-						</script>
-						<div>
-							<center>
-								<button id="myBtn" type="submit" class="btn btn-default">Submit</button>
-							</center>
-						</div>
-					</div>
-				</div>
-			</div>
-
+				$('.modal-footer .btn-primary').click(function() {
+					$('form[name="modalForm"]').submit();
+				});
+			</script>
 		</div>
-		<!-- /.container-fluid -->
-
 	</div>
+	<!-- /.container-fluid -->
+
 	<!-- /#page-wrapper -->
 
 	<!-- /#wrapper -->
