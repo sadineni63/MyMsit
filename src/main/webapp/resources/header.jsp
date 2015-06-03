@@ -63,7 +63,7 @@
                     <% if(session.getAttribute("role").toString().equalsIgnoreCase("mentor"))
                     {%>
                     <li>
-                        <a href="mentorsprofile.html"><i class="fa fa-fw fa-user-md"></i> Users</a>
+                        <a href="users"><i class="fa fa-fw fa-user-md"></i>Add Users</a>
                     </li>
 					<%
                     }
