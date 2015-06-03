@@ -87,8 +87,8 @@
 		Date date = new Date();
 		s.setWidth(1000);
 		s.setInitialDate(date);
-		s.load("events.jsp", DHXDataFormat.JSON);
-		s.data.dataprocessor.setURL("events.jsp");
+		s.load("resources/events.jsp", DHXDataFormat.JSON);
+		s.data.dataprocessor.setURL("resources/events.jsp");
 		return s.render();
 	}%>
 			</div>

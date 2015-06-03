@@ -57,10 +57,6 @@
 			google_ad_height = 90;
 		//-->
 		</script>
-		<script type="text/javascript"
-			src="resources/http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			
-		</script>
 	</div>
 	<div id="wrapper">
 
@@ -92,8 +88,8 @@
 		Date date = new Date();
 		s.setWidth(1000);
 		s.setInitialDate(date);
-		s.load("events.jsp", DHXDataFormat.JSON);
-		s.data.dataprocessor.setURL("events.jsp");
+		s.load("resources/events.jsp", DHXDataFormat.JSON);
+		s.data.dataprocessor.setURL("resourcesevents.jsp");
 		return s.render();
 	}%>
 			</div>
