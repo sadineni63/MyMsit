@@ -68,28 +68,16 @@
 			google_ad_height = 90;
 		//-->
 		</script>
-		<script type="text/javascript"
-			src="resources/http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			
-		</script>
 	</div>
 	<div id="wrapper">
 
-		<!-- Navigation -->
-
-		<!-- Navigation -->
 		<div id="header"></div>
-		<div id="page-wrapper">
-
-			<div class="container-fluid">
-
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12">
 						<h1 class="page-header">Profile</h1>
 					</div>
 				</div>
-				<div class="container">
 				<div class="row">
 					<div class="col-md-3">
 						<img class="img-circle" src="resources/img/download.jpg"><br>
@@ -102,7 +90,7 @@
 					</div>
 					<div class="col-lg-9">
 						<div class="table-responsive">
-							<table class="table table-striped" style="width: auto">
+							<table class="table table-striped table-bordered" style="width: auto">
 
 								<tr>
 									<th>Name</th>
@@ -130,14 +118,8 @@
 									<td id="bgroup">O +ve</td>
 								</tr>
 							</table>
-						</div>
-
 					</div>
-
-				</div>
 			</div>
-
-		</div>
 	</div>
 	<!-- /#wrapper -->
 
@@ -195,6 +177,7 @@
 				</div>
 
 			</div>
+		</div>
 		</div>
 		<!-- /#wrapper -->
 

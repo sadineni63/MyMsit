@@ -17,6 +17,9 @@
 		<bean id="courseDAO" class="net.mymsit.dao.CourseDAO">
 		<property name="dataSource" ref="msitDataSource"></property>
 	</bean>
+	<bean id="profileDAO" class="net.mymsit.dao.ProfileDAO">
+		<property name="dataSource" ref="msitDataSource"></property>
+	</bean>
 	
 	<bean id="bCrypt" class="net.mymsit.security.BCrypt">
 	</bean>

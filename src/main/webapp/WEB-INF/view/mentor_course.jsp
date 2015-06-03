@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.mymsit.course.Course"%>
@@ -65,7 +66,6 @@
 		addCourse(cname, sdate, edate);
 	}
 	function addCourse(cname, sdate, edate) {
-
 		var issue_num = document.getElementById("panel-body").childNodes.length;
 		console.log(issue_num);
 		var coursename = document.createElement("h2");
@@ -74,11 +74,9 @@
 		divTag.class = "center";
 		divTag.id = "" + issue_num;
 		document.getElementById("panel-body").appendChild(divTag);
-
 		var startdate = document.createElement("h6");
 		startdate.innerHTML = "" + sdate;
 		document.getElementById("" + issue_num).appendChild(startdate);
-
 		var enddate = document.createElement("h6");
 		endate.innerHtml = "" + edate;
 		document.getElementById("" + issue_num).appendChild(edate);
@@ -113,13 +111,12 @@
 				<c:if test="${not empty courses}">
 
 					<%
-					
 						List<Course> courses=(ArrayList<Course>)request.getAttribute("courses");
-						for(int i=1;i<=courses.size();i++)
-						{
-							Course c=courses.get(i-1);
-							if(i%4==1)
-							{
+																								for(int i=1;i<=courses.size();i++)
+																								{
+																									Course c=courses.get(i-1);
+																									if(i%4==1)
+																									{
 					%>
 					<div class="row">
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -136,16 +133,15 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a
-										href="mentor_course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
 										Course</a>
 								</div>
 							</div>
 						</div>
 						<%
 							}
-														else if(i%4==0)
-														{
+																																						else if(i%4==0)
+																																						{
 						%>
 
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -162,8 +158,7 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a
-										href="mentor_course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
 										Course</a>
 								</div>
 							</div>
@@ -171,8 +166,8 @@
 					</div>
 					<%
 						}
-												else
-												{
+																														else
+																														{
 					%>
 					<div class="col-md-3 col-sm-6 col-xs-6">
 						<div class="panel panel-default">
@@ -188,35 +183,36 @@
 								</div>
 							</div>
 							<div class="panel-footer">
-								<a
-									href="mentor_course_content.html?course_id=<%=c.getCourseId()%>">Goto
+								<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
 									Course</a>
 							</div>
 						</div>
 					</div>
 					<%
 						}
-					}
+																							}
 					%>
 				</c:if>
-	
-			</div>
+
 				<div style="text-align: center" class="form-buttons-wrapper">
 					<button type="button" id="addcourse" class="btn btn-primary btn-lg"
 						data-toggle="modal" data-target="#myModal">Add Course</button>
 				</div>
-					
-		<%
-			if(request.getParameter("course_create")!=null)
-			{
-				%>		<div style="text-align: center" class="form-buttons-wrapper">
-						<label style="color: red">Course Can't be Created. Duplicate Course ID</label>
-						</div>
-						<%
-			}
-		%>
+			</div>
+
+			<%
+				if(request.getParameter("course_create")!=null)
+									{
+			%>
+			<div style="text-align: center" class="form-buttons-wrapper">
+				<label style="color: red">Course Can't be Created. Duplicate
+					Course ID</label>
+			</div>
+			<%
+				}
+			%>
 		</div>
-		
+
 		<!-- /.container-fluid -->
 		<!-- Modal -->
 
@@ -239,19 +235,22 @@
 									<label>Course ID* :</label> <input type="text" name="cid"
 										required="required" class="form-control" id="cid"><br>
 									<label>Course Name* :</label> <input type="text" name="cname"
-										required="required" class="form-control" id="cname">
-
+										required="required" class="form-control" id="cname"> <label>Number
+										of Weeks* :</label> <input type="number" name="now"
+										required="required" class="form-control" id="now">
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>Start Date:</label> <input type="date" required="required"
-											class="form-control" id="sdate" name="sdate">
+										<label>Start Date:</label> <input type="date"
+											required="required" class="form-control" id="sdate"
+											name="sdate">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="hero-unit">
-										<label>End Date:</label> <input type="date" required="required"
-											class="form-control" id="edate" name="edate">
+										<label>End Date:</label> <input type="date"
+											required="required" class="form-control" id="edate"
+											name="edate" onchange="">
 									</div>
 								</div>
 
@@ -275,7 +274,7 @@
 					</script>
 					<script type="text/javascript">
 						var form = $('#myModal');
-						form.submit(function(ev) {
+						form.form.submit(function(ev) {
 							$.ajax({
 								type : form.attr('method'),
 								url : form.attr('action'),
@@ -291,17 +290,16 @@
 		</div>
 
 
-	<!-- /#page-wrapper -->
+		<!-- /#page-wrapper -->
 
-	<!-- jQuery -->
+		<!-- jQuery -->
 
-	<!-- Morris Charts JavaScript -->
-	<script src="resources/js/plugins/morris/raphael.min.js"></script>
-	<script src="resources/js/plugins/morris/morris.min.js"></script>
-	<script src="resources/js/plugins/morris/morris-data.js"></script>
+		<!-- Morris Charts JavaScript -->
+		<script src="resources/js/plugins/morris/raphael.min.js"></script>
+		<script src="resources/js/plugins/morris/morris.min.js"></script>
+		<script src="resources/js/plugins/morris/morris-data.js"></script>
 
-	<!-- Flot Charts JavaScript -->
-	<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-
+		<!-- Flot Charts JavaScript -->
+		<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
 </body>
 </html>
