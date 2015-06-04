@@ -55,7 +55,7 @@
                         <a href="profile"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
                     <li>
-                        <a href="batchmates.html"><i class="fa fa-fw fa-users"></i> Batch Mates</a>
+                        <a href="batchmates.html"><i class="fa fa-fw fa-users"></i> Students</a>
                     </li>
                     <li>
                         <a href="mentorsprofile.html"><i class="fa fa-fw fa-user-md"></i> Mentors</a>
