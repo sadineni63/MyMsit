@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Dashboard</title>
+<title>Course</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -93,7 +93,7 @@
 						<ol class="breadcrumb">
 							<li><i class="fa fa-book"></i> <a href="courses.html">Courses</a>
 							</li>
-							<li class="active"><i class="fa fa-file"></i> Java</li>
+							<li class="active"><i class="fa fa-file"></i> ${cname}</li>
 						</ol>
 					</div>
 				</div>
