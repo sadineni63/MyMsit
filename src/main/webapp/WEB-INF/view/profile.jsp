@@ -83,9 +83,9 @@
 						<img class="img-circle" src="resources/img/download.jpg"><br>
 						<br>
 						<center>
-							<button class="btn btn-success" type="button" id="edit"
-								data-toggle="modal" data-target="#editprofileModal">Edit
-								Profile</button>
+							<a class="btn btn-success" type="button" id="edit"
+								href="update_profile">Edit
+								Profile</a>
 						</center>
 					</div>
 					<div class="col-lg-9">
@@ -94,28 +94,26 @@
 
 								<tr>
 									<th>Name</th>
-									<td id="name">k.uday kiran</td>
-								</tr>
+									<td id="name">${profile.name}</td>
 								<tr>
 									<th>DOB</th>
-									<td id="dob">02/04/1993</td>
+									<td id="dob">${profile.dob}</td>
 								</tr>
 								<tr>
 									<th>Email Id</th>
-									<td id="email">udaykiran0528@gmail.com</td>
+									<td id="email">${profile.email}</td>
 								</tr>
 								<tr>
 									<th>Phone Number</th>
-									<td id="phno">7842604231</td>
+									<td id="phno">${profile.pno}</td>
 								</tr>
 								<tr>
 									<th>Address</th>
-									<td id="address">hno 24-801/1, panchasheela
-										colony,rangareddy nagar,hyd</td>
+									<td id="address">${profile.address}</td>
 								</tr>
 								<tr>
 									<th>Blood group</th>
-									<td id="bgroup">O +ve</td>
+									<td id="bgroup">${profile.bGroup}</td>
 								</tr>
 							</table>
 					</div>

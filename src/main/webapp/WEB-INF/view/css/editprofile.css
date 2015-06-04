@@ -1,0 +1,82 @@
+@CHARSET "ISO-8859-1";
+.body{
+	background: url("../img/images.jpg");
+	background-size : cover;
+}
+
+.details
+{
+	position: relative;
+	margin-top: 20%;
+}
+.details input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+.details input[type=email]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+.details input[type=date]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+.details input[type=number]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	color: black;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	font-family: 'Exo-Light', sans-serif;
+	font-size: 16px;
+	padding: 4px;
+}
+.details input[type=submit]{
+	width: 250px;
+	height: 30px;
+	background: lightskyblue;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-color:black;
+	border-radius: 2px;
+	color:blue;
+	font-family: 'Exo-Bold',sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 4px;
+	cursor: pointer;
+	
+}
+#lcmsg
+{
+	position: relative;
+	padding-left: 10px;
+	font-family: Exo;
+	font-size: 15px;
+	color: #ff6666;
+}

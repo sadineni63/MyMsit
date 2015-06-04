@@ -11,7 +11,9 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class ProfileDAO {
@@ -21,6 +23,35 @@ public class ProfileDAO {
 		this.dataSource = dataSource;
 		jdbcTempalte = new NamedParameterJdbcTemplate(dataSource);
 	}
+	
+	public int createProfileDetails(Profile profile)
+	{
+		String SQL = "INSERT INTO profile VALUES (:username,:name,:dob,:email,:pno,:blood_group,:address)";
+		Map<String, String> namedParameters = new HashMap<String, String>();
+		namedParameters.put("username", profile.getUsername());
+		namedParameters.put("name", profile.getName());
+		namedParameters.put("dob", profile.getDob());
+		namedParameters.put("email", profile.getEmail());
+		namedParameters.put("pno", profile.getPno());
+		namedParameters.put("blood_group", profile.getbGroup());
+		namedParameters.put("address", profile.getAddress());
+		return jdbcTempalte.update(SQL, namedParameters);
+	}
+	
+	public int updateProfileDetails(Profile profile)
+	{
+		String SQL = "update profile set name=:name,dob=:dob,email=:email,pno=:pno,blood_group=:blood_group,address=:address where username=:username";
+		Map<String, String> namedParameters = new HashMap<String, String>();
+		namedParameters.put("username", profile.getUsername());
+		namedParameters.put("name", profile.getName());
+		namedParameters.put("dob", profile.getDob());
+		namedParameters.put("email", profile.getEmail());
+		namedParameters.put("pno", profile.getPno());
+		namedParameters.put("blood_group", profile.getbGroup());
+		namedParameters.put("address", profile.getAddress());
+		return jdbcTempalte.update(SQL, namedParameters);
+	}
+	
 	
 	public Profile getProfileDetails(String username)
 	{

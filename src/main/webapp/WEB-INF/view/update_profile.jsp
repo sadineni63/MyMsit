@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page import="net.mymsit.user.Profile" %>
 <html>
 <head>
-<title>Create Profile</title>
+<title>Update Profile</title>
 <link href="resources/css/editprofile.css" rel="stylesheet">
 
 <!-- Bootstrap Core CSS -->
@@ -36,51 +37,6 @@ $(function() {
 	$("#header").load("resources/header.jsp");
 });
 
-	function validate() {
-
-		var message = document.getElementById('perr');
-		if (message.innerHTML == "Passwords Do Not Match!") {
-			return false;
-		}
-
-		var role = document.getElementById("role");
-		var rolemsg = document.getElementById('rolemsg');
-		if (role.value == "0") {
-			rolemsg.innerHTML = "Please select a Role";
-			role.focus();
-			return false;
-		}
-		rolemsg.innerHTML = "";
-		var lc = document.getElementById("learning_center");
-		if (lc.value == "0") {
-			var lcmsg = document.getElementById('lcmsg');
-			lcmsg.innerHTML = "Please select a Learning Center";
-			lc.focus();
-			return false;
-		}
-		return true;
-	}
-
-	function checkPasswords() {
-		var pass1 = document.getElementById('password');
-		var pass2 = document.getElementById('repassword');
-		var message = document.getElementById('perr');
-		var match = "#66cc66";
-		var notmatch = "#ff6666";
-		if (pass1.value == pass2.value) {
-			pass2.style.backgroundColor = match;
-			message.style.color = match;
-			message.innerHTML = "Passwords Match!";
-		} else {
-			//The passwords do not match.
-			//Set the color to the bad color and
-			//notify the user.
-			pass2.style.backgroundColor = notmatch;
-			message.style.color = notmatch;
-			message.innerHTML = "Passwords Do Not Match!";
-		}
-	}
-
 </script>
 </head>
 <body>
@@ -88,6 +44,7 @@ $(function() {
 		<div class="body">
 
 			<div id="header"></div>
+			<%Profile profile=(Profile)request.getAttribute("profile"); %>
 			<div class="row">
 				<div class="col-lg-12">
 					<h1 class="page-header">Edit profile</h1>
@@ -103,20 +60,20 @@ $(function() {
 				<div class="details">
 					<form action="create_profile" method="post">
 						<br> <br> <input type="text" required="required"
-							contenteditable="false" placeholder="User name" name="username"
+							contenteditable="false" disabled="disabled" placeholder="User name" name="username"
 							id="username" value="${username}"> <br> <br> <input type="text" required="required"
 							contenteditable="false" placeholder="Name" name="name"
-							id="name"> <br> <br><input
+							id="name" value="${profile.name}"> <br> <br><input
 							type="date" required="required" placeholder="DOB" name="dob"
-							id="dob"> <br> <br> <input type="email"
+							id="dob" value="${profile.dob}" > <br> <br> <input type="email"
 							required="required" placeholder="Email id" name="email"
-							id="email"><br> <br> <input type="number"
+							id="email" value="${profile.email}"><br> <br> <input type="number"
 							required="required" placeholder="phone number" name="phno"
-							id="phno"> <br> <br>
+							id="phno" value="${profile.pno}"> <br> <br>
 						<textarea required="required" rows="5" cols="29"
-							placeholder="Address" name="addr" id="addr"></textarea>
+							placeholder="Address" name="addr" id="addr">${profile.address}</textarea>
 						<br> <br> <input type="text" required="required"
-							placeholder="blood group" name="bgrp" id="bgrp"> <label
+							placeholder="blood group" name="bgrp" id="bgrp" value="${profile.bGroup}"> <label
 							id="lcmsg"></label> <br> <br> <br> <input
 							type="submit" value="Submit">
 					</form>
@@ -129,10 +86,6 @@ $(function() {
 
 	</div>
 	<!-- /#page-wrapper -->
-
-	</div>
-	</div>
-	</div>
 	<script src=" resources/js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
