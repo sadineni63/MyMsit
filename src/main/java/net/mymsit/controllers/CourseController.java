@@ -1,13 +1,14 @@
 package net.mymsit.controllers;
 
 import java.io.IOException;
+
 import java.text.ParseException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import net.mymsit.course.Course;
+import net.mymsit.course.*;
 import net.mymsit.course.CourseWeek;
 import net.mymsit.course.DirectoryManager;
 import net.mymsit.dao.CourseDAO;
@@ -17,6 +18,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 public class CourseController {
@@ -60,6 +62,7 @@ public class CourseController {
 			String cname=request.getParameter("cname");
 			List<CourseWeek> courseWeeks = courseDAO.getWeekDurations(cid);
 			session.setAttribute("cname", cname);
+			session.setAttribute("cid", cid);
 			view.addAttribute("courseWeeks", courseWeeks);
 			if (session.getAttribute("role").toString().equalsIgnoreCase("mentor")) {
 				return "mentor_course_content";
@@ -109,11 +112,17 @@ public class CourseController {
 
 	@RequestMapping("create_module")
 	public String createModuleContent(HttpServletRequest request) {
-		String cid = request.getParameter("course_id");
-		String week = request.getParameter("week");
-		String module = request.getParameter("module");
-		
-		
-		return "";
+		String cid = request.getParameter("cid");
+		int week = Integer.parseInt(request.getParameter("week"));
+		int module = Integer.parseInt(request.getParameter("m_no"));
+		String mName=request.getParameter("m_name");
+		String date=request.getParameter("m_date");
+		String day=request.getParameter("day");
+		int not=Integer.parseInt(request.getParameter("not"));
+		String session=request.getParameter("session");
+		String deadline=request.getParameter("deadline");
+		Module m=new Module(cid, week, module, mName, date, day, not, session, deadline);
+		courseDAO.createModuleDetails(m);
+			return "course_content.html?cid="+cid;
 	}
 }

@@ -91,4 +91,27 @@ public class CourseDAO {
 		String SQL = "select * from course_week_duration where c_id="+cid;
 		return new JdbcTemplate(dataSource).query(SQL, new CourseWeekMapper());
 	}
+
+	public int createModuleDetails(Module m) {
+		// TODO Auto-generated method stub
+		try {
+			String SQL = "INSERT INTO course_module(cid,week,mno,m_name,date,day,not,session,deadline) VALUES (:cid,:week,:mno,:m_name,:date,:day,:not,:session,:deadline)";
+			Map<String, Object> namedParameters = new HashMap<String, Object>();
+			namedParameters.put("cid", m.getCid());
+			namedParameters.put("week",m.getWeek());
+			namedParameters.put("mno", m.getModule());
+			namedParameters.put("m_name", m.getmName());
+			namedParameters.put("date", m.getDate());
+			namedParameters.put("day", m.getDay());
+			namedParameters.put("not",new Integer(m.getNot()));
+			namedParameters.put("session", m.getSession());
+			namedParameters.put("deadline", m.getDeadline());
+			if (jdbcTempalte.update(SQL, namedParameters) > 0) {
+				return 1;
+				}
+		} catch (DuplicateKeyException e) {
+			return 0;
+		}
+		return 0;
+	}
 }
