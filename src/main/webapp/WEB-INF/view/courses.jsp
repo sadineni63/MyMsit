@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html" pageEncoding="ISO-8859-1"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+=======
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+>>>>>>> origin/master
 <%@ page import="java.util.*"%>
 <%@ page import="net.mymsit.course.Course"%>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +19,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Courses</title>
+<title>Dashboard</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +43,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript" src="resources/js/jquery.js"></script>
+<link rel="stylesheet" href="resources/css/datepicker.css">
+<script src="resources/js/jquery.min.js"></script>
+<script src="resources/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/scripts.js"></script>
 <script>
 	$(function() {
 		$("#header").load("resources/header.jsp");
@@ -51,29 +62,52 @@
 		});
 	})
 </script>
-
+<script type="text/javascript">
+	function values() {
+		var x = document.getElementById("mymodal");
+		var cname = document.getElementById("cname").value;
+		var sdate = document.getElementById("sdate").value;
+		var edate = document.getElementById("edate").value;
+		addCourse(cname, sdate, edate);
+	}
+	function addCourse(cname, sdate, edate) {
+		var issue_num = document.getElementById("panel-body").childNodes.length;
+		console.log(issue_num);
+		var coursename = document.createElement("h2");
+		coursename.innerHtml = "" + cname;
+		var divTag = document.createElement("div");
+		divTag.class = "center";
+		divTag.id = "" + issue_num;
+		document.getElementById("panel-body").appendChild(divTag);
+		var startdate = document.createElement("h6");
+		startdate.innerHTML = "" + sdate;
+		document.getElementById("" + issue_num).appendChild(startdate);
+		var enddate = document.createElement("h6");
+		endate.innerHtml = "" + edate;
+		document.getElementById("" + issue_num).appendChild(edate);
+		console.log(document.getElementById("panel-body").childNodes.length);
+	}
+</script>
 
 </head>
 
 <body>
 
 	<div id="wrapper">
-
 		<!-- Navigation -->
 		<!-- Navigation -->
 		<div id="header"></div>
-
 		<div id="page-wrapper">
-<!-- Page Heading -->
-<div class="container-fluid">
 
+			<div class="container-fluid">
+				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12">
 						<h1 class="page-header">Courses</h1>
 						<ol class="breadcrumb">
 							<li><i class="fa fa-dashboard"></i> <a href="dashboard.html">Dashboard</a>
 							</li>
-							<li class="active"><i class="fa fa-book"></i> Courses
+							<li class="active"><i class="fa fa-bar-chart-o"></i> Courses
 							</li>
 						</ol>
 					</div>
@@ -83,11 +117,11 @@
 
 					<%
 						List<Course> courses=(ArrayList<Course>)request.getAttribute("courses");
-						for(int i=1;i<=courses.size();i++)
-						{
-							Course c=courses.get(i-1);
-							if(i%4==1)
-							{
+																								for(int i=1;i<=courses.size();i++)
+																								{
+																									Course c=courses.get(i-1);
+																									if(i%4==1)
+																									{
 					%>
 					<div class="row">
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -104,16 +138,15 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a
-										href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 										Course</a>
 								</div>
 							</div>
 						</div>
 						<%
 							}
-														else if(i%4==0)
-														{
+																																						else if(i%4==0)
+																																						{
 						%>
 
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -130,8 +163,7 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a
-										href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 										Course</a>
 								</div>
 							</div>
@@ -139,8 +171,8 @@
 					</div>
 					<%
 						}
-												else
-												{
+																														else
+																														{
 					%>
 					<div class="col-md-3 col-sm-6 col-xs-6">
 						<div class="panel panel-default">
@@ -156,38 +188,119 @@
 								</div>
 							</div>
 							<div class="panel-footer">
-								<a
-									href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+								<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 									Course</a>
 							</div>
 						</div>
 					</div>
 					<%
 						}
-					}
+																							}
 					%>
 				</c:if>
-		</div>
-		</div>
-		</div>
-	<!-- /.container-fluid -->
-	<!-- /#page-wrapper -->
-	<!-- jQuery -->
-	<!-- jQuery -->
-	<script src="resources/js/jquery.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="resources/js/bootstrap.min.js"></script>
-	<!-- Morris Charts JavaScript -->
-	<script src="resources/js/plugins/morris/raphael.min.js"></script>
-	<script src="resources/js/plugins/morris/morris.min.js"></script>
-	<script src="resources/js/plugins/morris/morris-data.js"></script>
-	<!-- Flot Charts JavaScript -->
-	<!--[if lte IE 8]><script src="resources/js/excanvas.min.js"></script><![endif]-->
-	<script src="resources/js/plugins/flot/jquery.flot.js"></script>
-	<script src="resources/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-	<script src="resources/js/plugins/flot/jquery.flot.resize.js"></script>
-	<script src="resources/js/plugins/flot/jquery.flot.pie.js"></script>
-	<script src="resources/js/plugins/flot/flot-data.js"></script>
-</body>
 
+			</div>
+
+			<%
+				if(request.getParameter("course_create")!=null)
+									{
+			%>
+			<div style="text-align: center" class="form-buttons-wrapper">
+				<label style="color: red">Course Can't be Created. Duplicate
+					Course ID</label>
+			</div>
+			<%
+				}
+			%>
+		</div>
+
+		<!-- /.container-fluid -->
+		<!-- Modal -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h3 class="modal-title" id="myModalLabel">Course Form</h3>
+					</div>
+					<div class="modal-body">
+						<div class="details">
+							<form role="form" action="create_course" method="post">
+								<div class="form-group">
+
+									<label>Course ID* :</label> <input type="text" name="cid"
+										required="required" class="form-control" id="cid"><br>
+									<label>Course Name* :</label> <input type="text" name="cname"
+										required="required" class="form-control" id="cname"> <label>Number
+										of Weeks* :</label> <input type="number" name="now"
+										required="required" class="form-control" id="now">
+								</div>
+								<div class="form-group">
+									<div class="hero-unit">
+										<label>Start Date:</label> <input type="date"
+											required="required" class="form-control" id="sdate"
+											name="sdate">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="hero-unit">
+										<label>End Date:</label> <input type="date"
+											required="required" class="form-control" id="edate"
+											name="edate" onchange="">
+									</div>
+								</div>
+
+								<button id="myBtn" type="submit" class="btn btn-default"
+									onclick="values()">Submit</button>
+							</form>
+						</div>
+
+					</div>
+					<script src="resources/js/jquery.min.js"></script>
+					<script src="resources/js/bootstrap-datepicker.js"></script>
+					<script type="text/javascript">
+						// When the document is ready
+						$(document).ready(function() {
+
+							$('#example1').datepicker({
+								format : "dd/mm/yyyy"
+							});
+
+						});
+					</script>
+					<script type="text/javascript">
+						var form = $('#myModal');
+						form.form.submit(function(ev) {
+							$.ajax({
+								type : form.attr('method'),
+								url : form.attr('action'),
+								data : form.serialize(),
+								success : function(data) {
+									window.location.reload();
+								}
+							});
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- /#page-wrapper -->
+
+		<!-- jQuery -->
+
+		<!-- Morris Charts JavaScript -->
+		<script src="resources/js/plugins/morris/raphael.min.js"></script>
+		<script src="resources/js/plugins/morris/morris.min.js"></script>
+		<script src="resources/js/plugins/morris/morris-data.js"></script>
+
+		<!-- Flot Charts JavaScript -->
+		<!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+</body>
 </html>
