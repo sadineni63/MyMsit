@@ -57,7 +57,9 @@ public class CourseController {
 			return "redirect:/Login/signin";
 		else {
 			String cid=request.getParameter("course_id");
+			String cname=request.getParameter("cname");
 			List<CourseWeek> courseWeeks = courseDAO.getWeekDurations(cid);
+			session.setAttribute("cname", cname);
 			view.addAttribute("courseWeeks", courseWeeks);
 			if (session.getAttribute("role").toString().equalsIgnoreCase("mentor")) {
 				return "mentor_course_content";

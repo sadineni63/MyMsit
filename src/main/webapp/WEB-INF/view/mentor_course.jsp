@@ -133,7 +133,7 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 										Course</a>
 								</div>
 							</div>
@@ -158,7 +158,7 @@
 									</div>
 								</div>
 								<div class="panel-footer">
-									<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+									<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 										Course</a>
 								</div>
 							</div>
@@ -183,7 +183,7 @@
 								</div>
 							</div>
 							<div class="panel-footer">
-								<a href="course_content.html?course_id=<%=c.getCourseId()%>">Goto
+								<a href="course_content.html?course_id=<%=c.getCourseId()%>&cname=<%=c.getCourse_Name()%>">Goto
 									Course</a>
 							</div>
 						</div>
