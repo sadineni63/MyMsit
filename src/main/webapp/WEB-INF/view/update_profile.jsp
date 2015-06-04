@@ -58,7 +58,7 @@ $(function() {
 			</div>
 			<div class="row">
 				<div class="details">
-					<form action="create_profile" method="post">
+					<form action="update_profile.do" method="post">
 						<br> <br> <input type="text" required="required"
 							contenteditable="false" disabled="disabled" placeholder="User name" name="username"
 							id="username" value="${username}"> <br> <br> <input type="text" required="required"

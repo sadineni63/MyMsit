@@ -60,7 +60,7 @@ public class ProfileController {
 		String address=request.getParameter("addr");
 		String bGroup=request.getParameter("bgrp");
 		Profile profile=new Profile(username, name, dob, email, pno, bGroup, address);
-		if(profileDAO.updateProfileDetails(profile)==1)
+		if(profileDAO.createProfileDetails(profile)==1)
 		{
 			view.addAttribute("profile",profile);
 			return "profile";
@@ -85,9 +85,9 @@ public class ProfileController {
 	}
 	@RequestMapping("/update_profile.do")
 	public String updateProfile(HttpServletRequest request,Model view) {
-		String username= request.getParameter("username");
-		if(username==null)
+		if(request.getSession().getAttribute("username")==null)
 			return "redirect:/Login/signin";
+		String username=request.getSession().getAttribute("username").toString();
 		String name=request.getParameter("name");
 		String dob=request.getParameter("dob");
 		String email=request.getParameter("email");
