@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<%@ page import="java.util.*"%>
+<%@ page import="net.mymsit.user.Profile" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +77,6 @@
 
 		<!-- Navigation -->
 		<div id="header"></div>
-		<div id="page-wrapper">
 
 			<div class="container-fluid">
 
@@ -87,50 +87,76 @@
 					</div>
 				</div>
 	
-	<div class="container">
+				<%
+					if(request.getAttribute("mentorsprofile")!=null){
+						List<Profile> prof=(ArrayList<Profile>)request.getAttribute("mentorsprofile");
+						for(int i=1;i<=prof.size();i++)
+						{
+							Profile pro=prof.get(i-1);
+							if(i%3==1)
+							{
+					%>
 		<div class="row">
-			<div class="col-sm-3">
+		
+			<div class="col-sm-4">
 				<div class="card">
-					<canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+					<canvas class="header-bg" width="200" height="70" id="header-blur"></canvas>
 					<div class="avatar">
 						<img src="" alt="" />
 					</div>
 					<div class="content">
-						<p>
-							Faculty1 <br> More description here
-						</p>
+						<p><h2><%=pro.getName()%></h2></p>
+						<p>DOB: <%=pro.getDob()%></p>
+						<p><%=pro.getEmail()%></p>
+						<p><%=pro.getPno()%></p>
+						<p><%=pro.getbGroup()%></p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			
+		<%
+							}
+		else if(i%3==0)
+						{
+%>
+<div class="col-sm-4">
 				<div class="card">
-					<canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+					<canvas class="header-bg" width="200" height="70" id="header-blur"></canvas>
 					<div class="avatar">
 						<img src="" alt="" />
 					</div>
 					<div class="content">
-						<p>
-							Faculty2 <br> More description here
-						</p>
+						<p><h2><%=pro.getName()%></h2></p>
+						<p>DOB: <%=pro.getDob()%></p>
+						<p><%=pro.getEmail()%></p>
+						<p><%=pro.getPno()%></p>
+						<p><%=pro.getbGroup()%></p>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			</div>
+			<%
+			}
+			else
+			{
+			%>
+			<div class="col-sm-4">
 				<div class="card">
-					<canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+					<canvas class="header-bg" width="200" height="70" id="header-blur"></canvas>
 					<div class="avatar">
 						<img src="" alt="" />
 					</div>
 					<div class="content">
-						<p>
-							Faculty3 <br> More description here
-						</p>
+						<p><h2><%=pro.getName()%></h2></p>
+						<p>DOB: <%=pro.getDob()%></p>
+						<p><%=pro.getEmail()%></p>
+						<p><%=pro.getPno()%></p>
+						<p><%=pro.getbGroup()%></p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
+			<%}}} %>				
+		
 </div>
 </div>
 

@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html" pageEncoding="ISO-8859-1"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <%@ page import="net.mymsit.course.Course"%>
@@ -16,7 +14,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Dashboard</title>
+<title>Courses</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">

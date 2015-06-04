@@ -67,7 +67,22 @@ public class ProfileDAO {
 	}
 	
 	public List<Profile> getAllStudentProfiles() {
-		return null;
+		try {
+			String query = "select * from profile as prf,logins as log where prf.username=log.username and log.role='Student'";
+			return (List<Profile>) jdbcTempalte.query(query,
+					new ProfileMapper());
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+	public List<Profile> getAllMentorProfiles() {
+		try {
+			String query = "select * from profile as prf,logins as log where prf.username=log.username and log.role='Mentor'";
+			return (List<Profile>) jdbcTempalte.query(query,
+					new ProfileMapper());
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 	
 
